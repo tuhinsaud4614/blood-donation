@@ -1,0 +1,32 @@
+.InputContainer {
+  position: relative;
+  background: var(--secondary-color);
+  border-radius: calc(var(--border-radius) * 1.3);
+  padding-right: 30px;
+  overflow: hidden;
+}
+
+.Input {
+  padding: calc(var(--pd) * 1.3);
+  background: inherit;
+  font-size: 1.6rem;
+  font-size: 1.6rem;
+  border: none;
+  height: auto;
+}
+
+.Icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  max-width: 20px;
+  max-height: 20px;
+  color: var(--primary-color);
+}
+
+.Input:focus {
+  background: var(--secondary-color);
+  box-shadow: none;
+}

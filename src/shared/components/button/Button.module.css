@@ -1,0 +1,18 @@
+.Button {
+  background: var(--primary-color);
+  border-color: var(--primary-color-dark);
+  color: var(--secondary-color);
+  font-size: 1.6rem;
+  border-radius: calc(var(--border-radius) * 2.5);
+  padding: var(--pd);
+}
+
+.Button:hover {
+  background: var(--primary-color-dark);
+  border-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.Button:focus {
+  box-shadow: none;
+}

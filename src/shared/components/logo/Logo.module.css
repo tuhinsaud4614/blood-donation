@@ -1,0 +1,21 @@
+.Logo {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  align-items: center;
+}
+
+.Logo > img {
+  width: 50px;
+  height: 50px;
+}
+
+.Logo > p {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.Logo > p > span:last-child {
+  color: var(--primary-color);
+}
