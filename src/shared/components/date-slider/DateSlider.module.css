@@ -1,0 +1,45 @@
+.Container {
+  padding: 10px;
+  background: red;
+  width: min-content;
+}
+
+.Slider {
+  /* width: 300px; */
+  background: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SliderItem {
+  padding: var(--pd);
+  cursor: pointer;
+  user-select: none;
+  font-weight: bolder;
+}
+
+.SliderItemEmpty {
+  padding: var(--pd);
+}
+
+.Current {
+  font-size: 2.2rem;
+  color: #000;
+}
+
+.Sm {
+  font-size: 1.9rem;
+  color: #9b9999;
+}
+.Xs {
+  font-size: 1.7rem;
+  color: #bdbdbd;
+}
+
+.Text {
+  font-size: 1.6rem;
+  margin: 0;
+  padding-top: var(--pd);
+  text-align: center;
+}
