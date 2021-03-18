@@ -6,7 +6,7 @@ import Avatar from "../../../../shared/components/avatar/Avatar";
 const UserInfo = ({ data, customClass }) => {
   return (
     <div className={`${classes.UserInfo}`}>
-      <div className={`${classes.Texts}`}>
+      <div className={`${classes.Texts} `}>
         <h3>{data.name}</h3>
         <p>{data.status}</p>
       </div>
