@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import { FaUpload, FaTimes } from "react-icons/fa";
 
-import img from "../../../assets/img/blood-logo.svg";
 import classes from "./ImagePicker.module.css";
 
 const ImagePicker = ({ id, name, changed, required = false, value }) => {

@@ -1,5 +1,7 @@
 import { useState } from "react";
-import ImagePicker from "./shared/components/image-picker/ImagePicker";
+import GenderRadio from "./shared/components/radio-button/GenderRadio";
+import img from "./assets/img/blood-logo.svg";
+// import ImagePicker from "./shared/components/image-picker/ImagePicker";
 // import { FiEye } from "react-icons/fi";
 
 // import Button from "./shared/components/button/Button";
@@ -39,7 +41,26 @@ function App() {
       <DateSlider closeItemNum={2} items={[1, 2, 3, 4, 5]}>
         Date
       </DateSlider> */}
-      <ImagePicker changed={(value) => setstate(value)} name="image" value={state} />
+      {/* <ImagePicker changed={(value) => setstate(value)} name="image" value={state} /> */}
+      <GenderRadio
+        name="gender"
+        img={img}
+        changed={(e) => {
+          console.log(e.target.value);
+        }}
+      >
+        Male
+      </GenderRadio>
+
+      <GenderRadio
+        name="gender"
+        img={img}
+        changed={(e) => {
+          console.log(e.target.value);
+        }}
+      >
+        Female
+      </GenderRadio>
     </div>
   );
 }
