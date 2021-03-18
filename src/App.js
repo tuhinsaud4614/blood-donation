@@ -1,16 +1,17 @@
 import { useState } from "react";
-import { FiEye } from "react-icons/fi";
+import ImagePicker from "./shared/components/image-picker/ImagePicker";
+// import { FiEye } from "react-icons/fi";
 
-import Button from "./shared/components/button/Button";
-import DateSlider from "./shared/components/date-slider/DateSlider";
-import Input from "./shared/components/input/Input";
-import Logo from "./shared/components/logo/Logo";
+// import Button from "./shared/components/button/Button";
+// import DateSlider from "./shared/components/date-slider/DateSlider";
+// import Input from "./shared/components/input/Input";
+// import Logo from "./shared/components/logo/Logo";
 
 function App() {
   const [state, setstate] = useState("");
   return (
     <div style={{ padding: "10px" }}>
-      <Button
+      {/* <Button
         blocked
         clicked={() => {
           console.log("cliked");
@@ -37,7 +38,8 @@ function App() {
       <br />
       <DateSlider closeItemNum={2} items={[1, 2, 3, 4, 5]}>
         Date
-      </DateSlider>
+      </DateSlider> */}
+      <ImagePicker changed={(value) => setstate(value)} name="image" value={state} />
     </div>
   );
 }

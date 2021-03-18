@@ -2,7 +2,13 @@ import PropTypes from "prop-types";
 
 import classes from "./Button.module.css";
 
-const Button = ({ type="button", clicked, disabled = false, blocked, children }) => {
+const Button = ({
+  type = "button",
+  clicked,
+  disabled = false,
+  blocked,
+  children,
+}) => {
   return (
     <button
       type={type}
@@ -18,8 +24,8 @@ const Button = ({ type="button", clicked, disabled = false, blocked, children })
 Button.propTypes = {
   clicked: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
-  type: PropTypes.string,
-  children: PropTypes.string,
+  type: PropTypes.oneOf(["button", "submit", "reset"]),
+  children: PropTypes.string.isRequired,
   blocked: PropTypes.bool,
 };
 

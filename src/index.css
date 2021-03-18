@@ -10,8 +10,8 @@
   --primary-color: #8a0303;
   --primary-color-dark: #770000;
   --secondary-color: #edf0f5;
-  --accent-color: rgba(50, 189, 80);
-  --accent-color-rgb: 50, 189, 80;
+  --text-color: #4a4a4a;
+  --text-color-rgb: 74, 74, 74;
   --pd: 0.8rem;
   --border-radius: 0.8rem;
 }
@@ -24,11 +24,26 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.form-group > label {
-  color: gray !important;
-  font-size: 1.4rem !important;
+.bx-sh {
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+    rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+}
+
+.bx-sh2 {
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px,
+    rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+}
+
+.bx-sh3 {
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px,
+    rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
 }
 
 .text-secondary {
   color: var(--secondary-color);
+}
+
+.form-group > label {
+  color: var(--text-color) !important;
+  font-size: 1.4rem !important;
 }
