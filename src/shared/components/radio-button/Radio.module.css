@@ -1,0 +1,79 @@
+.GenderRadio {
+  min-height: 120px;
+  min-width: 80px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.CircleRadio {
+  min-height: 40px;
+  min-width: 40px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.CircleRadio > input,
+.GenderRadio > input {
+  display: none;
+}
+
+.GenderRadioLabel,
+.CircleRadioLabel {
+  min-height: inherit;
+  min-width: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--pd);
+  background: var(--secondary-color);
+  transition: all 0.3s ease-in;
+}
+
+.GenderRadioLabel {
+  position: relative;
+  justify-content: space-between;
+  border-radius: var(--border-radius);
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+    rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+}
+
+.GenderRadioLabelIcon {
+  position: absolute;
+  left: -0.5rem;
+  top: -0.5rem;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  border-radius: 1.8rem;
+  color: var(--primary-color);
+}
+
+.GenderRadioLabel > p {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--text-color);
+  user-select: none;
+}
+
+.GenderRadioLabel:hover,
+.GenderRadio > input:checked + .GenderRadioLabel {
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px,
+    rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
+}
+
+.CircleRadioLabel {
+  justify-content: center;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  line-height: 1;
+  border-radius: 50%;
+  padding: 0 !important;
+}
+
+.CircleRadioLabel:hover,
+.CircleRadio > input:checked + .CircleRadioLabel {
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  border: none;
+}

@@ -1,8 +1,9 @@
 import { useState } from "react";
 import GenderRadio from "./shared/components/radio-button/GenderRadio";
 import img from "./assets/img/blood-logo.svg";
+import CircleRadio from "./shared/components/radio-button/CircleRadio";
 // import ImagePicker from "./shared/components/image-picker/ImagePicker";
-// import { FiEye } from "react-icons/fi";
+import { FaArrowAltCircleUp, FaArrowAltCircleDown } from "react-icons/fa";
 
 // import Button from "./shared/components/button/Button";
 // import DateSlider from "./shared/components/date-slider/DateSlider";
@@ -48,6 +49,7 @@ function App() {
         changed={(e) => {
           console.log(e.target.value);
         }}
+        icon={<FaArrowAltCircleUp />}
       >
         Male
       </GenderRadio>
@@ -58,9 +60,26 @@ function App() {
         changed={(e) => {
           console.log(e.target.value);
         }}
+        icon={<FaArrowAltCircleDown />}
       >
         Female
       </GenderRadio>
+      <CircleRadio
+        name="gender"
+        changed={(e) => {
+          console.log(e.target.value);
+        }}
+      >
+        AB+
+      </CircleRadio>
+      <CircleRadio
+        name="gender"
+        changed={(e) => {
+          console.log(e.target.value);
+        }}
+      >
+        )+
+      </CircleRadio>
     </div>
   );
 }
