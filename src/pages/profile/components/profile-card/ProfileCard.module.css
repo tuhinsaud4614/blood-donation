@@ -1,0 +1,125 @@
+.ProfileCard {
+  width: max-content;
+  max-width: 300px;
+  padding: var(--pd);
+  border-radius: var(--border-radius);
+}
+
+.Header {
+  height: 150px;
+  width: 100%;
+  position: relative;
+  border-radius: calc(var(--border-radius) * 0.5);
+  margin-bottom: var(--pd);
+}
+
+.Header > img {
+  height: inherit;
+  width: inherit;
+  object-fit: cover;
+  text-align: center;
+  border-radius: inherit;
+}
+
+.HeaderContent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: var(--pd);
+  border-radius: inherit;
+  backdrop-filter: blur(0.05rem);
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.HeaderContent > h3 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: var(--secondary-color);
+}
+
+.HeaderContent > p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+}
+
+.HeaderContentIcon {
+  position: absolute;
+  right: 10px;
+  bottom: -15px;
+  height: 50px;
+  width: 50px;
+}
+
+.HeaderContentIcon > img {
+  height: inherit;
+  width: inherit;
+}
+
+.HeaderContentIcon > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+}
+
+.Body {
+  padding: var(--pd);
+  padding-top: var(--pd);
+}
+
+.BodyTop,
+.BodyMid {
+  padding: var(--pd);
+}
+
+.BodyTop > h3,
+.BodyMid > h3 {
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.BodyTop > p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.BodyMidBadges {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: var(--pd);
+}
+
+.BodyMidBadges > div {
+  margin-right: calc(var(--pd) * 1.1);
+  margin-bottom: var(--pd);
+}
+
+.Progress,
+.ProgressBar {
+  border-radius: calc(var(--border-radius) * 2);
+}
+
+.ProgressBar {
+  background: var(--primary-color);
+}
+
+.Progress + p {
+  padding: calc(var(--pd) * 0.5);
+  font-size: 1.3rem;
+}
+
+.Progress + p > span {
+  color: var(--primary-color);
+}

@@ -1,7 +1,8 @@
 import { useState } from "react";
 // import GenderRadio from "./shared/components/radio-button/GenderRadio";
-import img from "./assets/img/blood-logo.svg";
+import img from "./assets/img/user2.jpg";
 import ProfileBadge from "./pages/profile/components/profile-badge/ProfileBadge";
+import ProfileCard from "./pages/profile/components/profile-card/ProfileCard";
 
 import Avatar from "./shared/components/avatar/Avatar";
 import Badge from "./shared/components/badge/Badge";
@@ -13,8 +14,16 @@ function App() {
   const [state, setstate] = useState("");
   return (
     <div style={{ padding: "10px" }}>
-      <ProfileBadge title="Life Saver" img={img} active />
-      <ProfileBadge title="Fast" img={img} />
+      <ProfileCard
+        user={{
+          name: "Ashu Priya",
+          status: "Beginner Donor",
+          group: "O+",
+          img: img,
+        }}
+      />
+      {/* <ProfileBadge title="Life Saver" img={img} active />
+      <ProfileBadge title="Fast" img={img} /> */}
       {/* <NotificationCard
         avatar={<Avatar customClass={`shadow`}>AB+</Avatar>}
         data={{ msg: "Posted a blood request near you", sender: "Musa Clinic" }}

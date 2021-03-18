@@ -4,11 +4,13 @@ const Divider = ({ type = "vertical" }) => {
   const style = {
     height: "100%",
     width: "2px",
-    background: "var(--text-color)",
+    margin: "0 var(--pd)",
+    background: "var(--secondary-color)",
   };
   if (type === "horizontal") {
     style.height = "2px";
     style.width = "100%";
+    style.margin = "var(--pd) 0";
   }
   return <div style={style} />;
 };

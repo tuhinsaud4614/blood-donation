@@ -11,8 +11,10 @@
 }
 
 .ProfileBadge > h3 {
+  padding-top: calc(var(--pd) * 0.5);
   color: var(--text-color);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  text-transform: capitalize;
 }
 
 .ProfileBadge > .Active {
