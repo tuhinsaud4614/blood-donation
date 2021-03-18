@@ -1,0 +1,21 @@
+.ProfileBadge {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ProfileBadge > img {
+  height: 40px;
+  width: 40px;
+}
+
+.ProfileBadge > h3 {
+  color: var(--text-color);
+  font-size: 1.4rem;
+}
+
+.ProfileBadge > .Active {
+  color: var(--primary-color);
+  font-weight: bolder;
+}

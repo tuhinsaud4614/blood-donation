@@ -1,31 +1,24 @@
 import { useState } from "react";
 // import GenderRadio from "./shared/components/radio-button/GenderRadio";
 import img from "./assets/img/blood-logo.svg";
-import NotificationCard from "./pages/notifications/components/NotificationCard";
-import HistoryCard from "./pages/Requests/components/history-card/HistoryCard";
-import RequestCard from "./pages/Requests/components/request-card/RequestCard";
-// import CircleRadio from "./shared/components/radio-button/CircleRadio";
-// import ImagePicker from "./shared/components/image-picker/ImagePicker";
-// import { FaArrowAltCircleUp, FaArrowAltCircleDown } from "react-icons/fa";
+import ProfileBadge from "./pages/profile/components/profile-badge/ProfileBadge";
+
 import Avatar from "./shared/components/avatar/Avatar";
 import Badge from "./shared/components/badge/Badge";
 import CheckButton from "./shared/components/check-button/CheckButton";
 import UserInfo from "./shared/components/navigation/user-info/UserInfo";
 import Select from "./shared/components/select/Select";
 
-// import Button from "./shared/components/button/Button";
-// import DateSlider from "./shared/components/date-slider/DateSlider";
-// import Input from "./shared/components/input/Input";
-// import Logo from "./shared/components/logo/Logo";
-
 function App() {
   const [state, setstate] = useState("");
   return (
     <div style={{ padding: "10px" }}>
-      <NotificationCard
+      <ProfileBadge title="Life Saver" img={img} active />
+      <ProfileBadge title="Fast" img={img} />
+      {/* <NotificationCard
         avatar={<Avatar customClass={`shadow`}>AB+</Avatar>}
         data={{ msg: "Posted a blood request near you", sender: "Musa Clinic" }}
-      />
+      /> */}
       {/* <HistoryCard
         data={{ group: "AB+", place: "Los Angeles", type: "urgent" }}
       />
