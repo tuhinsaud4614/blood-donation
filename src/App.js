@@ -9,6 +9,7 @@ import RequestCard from "./pages/Requests/components/request-card/RequestCard";
 import Avatar from "./shared/components/avatar/Avatar";
 import Badge from "./shared/components/badge/Badge";
 import CheckButton from "./shared/components/check-button/CheckButton";
+import UserInfo from "./shared/components/navigation/user-info/UserInfo";
 import Select from "./shared/components/select/Select";
 
 // import Button from "./shared/components/button/Button";
@@ -22,6 +23,9 @@ function App() {
     <div style={{ padding: "10px" }}>
       <HistoryCard
         data={{ group: "AB+", place: "Los Angeles", type: "urgent" }}
+      />
+      <UserInfo
+        data={{ avatar: img, name: "John Doe", status: "Top Rated Donor" }}
       />
       {/* <CheckButton name="Check" changed={() => {}}>Check</CheckButton> */}
       {/* <Select name="age" changed={() => {}} data={[{ title: "One", value: "1" },{ title: "Two", value: "2" }]} /> */}

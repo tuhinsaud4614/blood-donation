@@ -1,0 +1,21 @@
+.UserInfo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: max-content;
+}
+
+.Texts {
+  padding: var(--pd);
+}
+.Texts > h3 {
+  font-size: 1.6rem;
+  text-align: right;
+}
+
+.Texts > p {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  text-align: right;
+}
