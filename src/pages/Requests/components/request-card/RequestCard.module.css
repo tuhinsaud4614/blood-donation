@@ -1,0 +1,88 @@
+.RequestCard {
+  padding: var(--pd);
+  border-radius: var(--border-radius);
+}
+.RequestCardTop {
+  display: flex;
+  align-items: center;
+}
+
+.RequestCardTopLeft {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.RequestCardTopLeft > h3 {
+  margin: 0;
+  font-weight: bolder;
+  font-size: 1.8rem;
+}
+
+.RequestCardTopLeft > span {
+  font-size: 1.1rem;
+}
+
+.RequestCardTopRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.RequestCardTopRight > div {
+  width: max-content;
+}
+
+.RequestCardTopRight > div > span {
+  padding: var(--pd);
+  margin-right: var(--pd);
+  border-radius: calc(var(--border-radius) * 2);
+  font-size: 1.1rem;
+}
+
+.RequestCardTopRight > div > svg {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.RequestCardTopRight > h3 {
+  margin: 0;
+  padding-top: calc(var(--pd) * 0.5);
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.RequestCardMid {
+  padding-top: var(--pd);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.RequestCardMid > h4 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: bolder;
+}
+
+.RequestCardMid > h4 > span {
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.RequestCardBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.1rem;
+}
+
+.RequestCardBottom > span {
+    display: flex;
+    align-items: center;
+}
+
+.RequestCardBottom > span > svg {
+  margin-right: var(--pd);
+}

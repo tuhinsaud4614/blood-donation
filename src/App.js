@@ -1,9 +1,11 @@
 import { useState } from "react";
-import GenderRadio from "./shared/components/radio-button/GenderRadio";
+// import GenderRadio from "./shared/components/radio-button/GenderRadio";
 import img from "./assets/img/blood-logo.svg";
-import CircleRadio from "./shared/components/radio-button/CircleRadio";
+import RequestCard from "./pages/Requests/components/request-card/RequestCard";
+// import CircleRadio from "./shared/components/radio-button/CircleRadio";
 // import ImagePicker from "./shared/components/image-picker/ImagePicker";
-import { FaArrowAltCircleUp, FaArrowAltCircleDown } from "react-icons/fa";
+// import { FaArrowAltCircleUp, FaArrowAltCircleDown } from "react-icons/fa";
+import Avatar from "./shared/components/avatar/Avatar";
 
 // import Button from "./shared/components/button/Button";
 // import DateSlider from "./shared/components/date-slider/DateSlider";
@@ -43,7 +45,7 @@ function App() {
         Date
       </DateSlider> */}
       {/* <ImagePicker changed={(value) => setstate(value)} name="image" value={state} /> */}
-      <GenderRadio
+      {/* <GenderRadio
         name="gender"
         img={img}
         changed={(e) => {
@@ -80,6 +82,8 @@ function App() {
       >
         )+
       </CircleRadio>
+      <Avatar>O+</Avatar> */}
+      <RequestCard />
     </div>
   );
 }
