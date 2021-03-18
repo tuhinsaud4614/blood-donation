@@ -1,0 +1,21 @@
+.HistoryCard {
+  width: max-content;
+  padding: var(--pd);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.HistoryCard > h3 {
+  font-size: 1.7rem;
+  font-weight: bolder;
+  padding-top: var(--pd);
+  text-transform: capitalize;
+}
+
+.HistoryCard > p {
+  font-size: 1.1rem;
+  padding-top: calc((var(--pd) * 0.5));
+  text-transform: capitalize;
+}

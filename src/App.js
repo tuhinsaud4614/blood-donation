@@ -1,6 +1,7 @@
 import { useState } from "react";
 // import GenderRadio from "./shared/components/radio-button/GenderRadio";
 import img from "./assets/img/blood-logo.svg";
+import HistoryCard from "./pages/Requests/components/history-card/HistoryCard";
 import RequestCard from "./pages/Requests/components/request-card/RequestCard";
 // import CircleRadio from "./shared/components/radio-button/CircleRadio";
 // import ImagePicker from "./shared/components/image-picker/ImagePicker";
@@ -19,7 +20,10 @@ function App() {
   const [state, setstate] = useState("");
   return (
     <div style={{ padding: "10px" }}>
-      <CheckButton name="Check" changed={() => {}}>Check</CheckButton>
+      <HistoryCard
+        data={{ group: "AB+", place: "Los Angeles", type: "urgent" }}
+      />
+      {/* <CheckButton name="Check" changed={() => {}}>Check</CheckButton> */}
       {/* <Select name="age" changed={() => {}} data={[{ title: "One", value: "1" },{ title: "Two", value: "2" }]} /> */}
       {/* <Badge
         badgeContent={
