@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 
-import Avatar from "../avatar/Avatar";
 import classes from "./Radio.module.css";
 
 const CircleRadio = ({ id, name, changed, children }) => {

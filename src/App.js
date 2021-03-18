@@ -7,6 +7,7 @@ import RequestCard from "./pages/Requests/components/request-card/RequestCard";
 // import { FaArrowAltCircleUp, FaArrowAltCircleDown } from "react-icons/fa";
 import Avatar from "./shared/components/avatar/Avatar";
 import Badge from "./shared/components/badge/Badge";
+import CheckButton from "./shared/components/check-button/CheckButton";
 import Select from "./shared/components/select/Select";
 
 // import Button from "./shared/components/button/Button";
@@ -18,7 +19,8 @@ function App() {
   const [state, setstate] = useState("");
   return (
     <div style={{ padding: "10px" }}>
-      <Select data={[{ title: "One", value: "1" }]} />
+      <CheckButton name="Check" changed={() => {}}>Check</CheckButton>
+      {/* <Select name="age" changed={() => {}} data={[{ title: "One", value: "1" },{ title: "Two", value: "2" }]} /> */}
       {/* <Badge
         badgeContent={
           <Avatar height={25} width={25}>

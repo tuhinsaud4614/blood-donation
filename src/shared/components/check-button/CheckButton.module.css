@@ -1,0 +1,62 @@
+.CheckButton {
+  /* min-height: 120px;
+  min-width: 80px; */
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+}
+
+.CheckButton > input {
+  display: none;
+}
+
+.CheckButtonLabel {
+  display: inline-block;
+  padding-left: calc(var(--pd) * 3);
+  vertical-align: top;
+  color: inherit;
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+.CheckButtonLabel::before,
+.CheckButtonLabel::after {
+  transition: all 0.3s ease-in-out;
+}
+
+.CheckButtonLabel::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: var(--secondary-color);
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px,
+    rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
+  position: absolute;
+  left: 0;
+  border-radius: 2px;
+}
+
+.CheckButtonLabel:hover::before {
+  border-color: var(--primary-color);
+}
+
+.CheckButtonLabel::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 13px;
+  border-width: 0 2px 2px 0;
+  border-style: solid;
+  border-color: transparent var(--primary-color) var(--primary-color)
+    transparent;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  transform: rotate(180deg) scale(0);
+}
+
+.CheckButton > input:checked + .CheckButtonLabel::after {
+  left: 6px;
+  transform: rotate(45deg) scale(1);
+}
