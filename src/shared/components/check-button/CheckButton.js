@@ -4,7 +4,7 @@ import classes from "./CheckButton.module.css";
 
 const CheckButton = ({ id, name, changed, children }) => {
   return (
-    <label className={`${classes.CheckButton}`}>
+    <label className={`${classes.CheckButton}`} >
       <input id={id} type="checkbox" name={name} onChange={changed} />
       <div className={`${classes.CheckButtonLabel}`}>{children}</div>
     </label>
