@@ -6,7 +6,7 @@ const Badge = ({ badgeContent, children }) => {
   return (
     <span className={`${classes.Badge} bx-sh3`}>
       {children}
-      <span className={`${classes.BadgeContent}`}>{badgeContent}</span>
+      {badgeContent && <span className={`${classes.BadgeContent}`}>{badgeContent}</span>}
     </span>
   );
 };

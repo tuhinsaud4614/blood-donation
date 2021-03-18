@@ -7,6 +7,7 @@ import RequestCard from "./pages/Requests/components/request-card/RequestCard";
 // import { FaArrowAltCircleUp, FaArrowAltCircleDown } from "react-icons/fa";
 import Avatar from "./shared/components/avatar/Avatar";
 import Badge from "./shared/components/badge/Badge";
+import Select from "./shared/components/select/Select";
 
 // import Button from "./shared/components/button/Button";
 // import DateSlider from "./shared/components/date-slider/DateSlider";
@@ -17,7 +18,8 @@ function App() {
   const [state, setstate] = useState("");
   return (
     <div style={{ padding: "10px" }}>
-      <Badge
+      <Select data={[{ title: "One", value: "1" }]} />
+      {/* <Badge
         badgeContent={
           <Avatar height={25} width={25}>
             9+
@@ -26,6 +28,9 @@ function App() {
       >
         <Avatar height={50} width={50} src={img} alt="icon" />
       </Badge>
+      <Badge>
+        <Avatar height={50} width={50} src={img} alt="icon" />
+      </Badge> */}
       {/* <Button
         blocked
         clicked={() => {
