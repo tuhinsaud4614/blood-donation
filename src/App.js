@@ -1,6 +1,7 @@
 import { useState } from "react";
 // import GenderRadio from "./shared/components/radio-button/GenderRadio";
 import img from "./assets/img/blood-logo.svg";
+import NotificationCard from "./pages/notifications/components/NotificationCard";
 import HistoryCard from "./pages/Requests/components/history-card/HistoryCard";
 import RequestCard from "./pages/Requests/components/request-card/RequestCard";
 // import CircleRadio from "./shared/components/radio-button/CircleRadio";
@@ -21,12 +22,16 @@ function App() {
   const [state, setstate] = useState("");
   return (
     <div style={{ padding: "10px" }}>
-      <HistoryCard
+      <NotificationCard
+        avatar={<Avatar customClass={`shadow`}>AB+</Avatar>}
+        data={{ msg: "Posted a blood request near you", sender: "Musa Clinic" }}
+      />
+      {/* <HistoryCard
         data={{ group: "AB+", place: "Los Angeles", type: "urgent" }}
       />
       <UserInfo
         data={{ avatar: img, name: "John Doe", status: "Top Rated Donor" }}
-      />
+      /> */}
       {/* <CheckButton name="Check" changed={() => {}}>Check</CheckButton> */}
       {/* <Select name="age" changed={() => {}} data={[{ title: "One", value: "1" },{ title: "Two", value: "2" }]} /> */}
       {/* <Badge

@@ -1,0 +1,28 @@
+.NotificationCard {
+  width: max-content;
+  padding: var(--pd);
+  border-radius: var(--border-radius);
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.Text {
+  padding: 0 var(--pd);
+  color: var(--text-color);
+  font-size: 1.3rem;
+  overflow-wrap: break-word;
+}
+
+.Text > span {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.NotificationCard > p {
+  white-space: nowrap;
+  align-self: flex-end;
+  font-size: 1.1rem;
+  padding-left: var(--pd);
+}
