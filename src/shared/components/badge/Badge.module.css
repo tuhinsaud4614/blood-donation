@@ -1,0 +1,21 @@
+.Badge {
+  display: inline-flex;
+  position: relative;
+  flex-shrink: 0;
+  vertical-align: middle;
+  border-radius: 50%;
+  padding: calc(var(--pd) * 0.5);
+}
+
+.BadgeContent {
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.BadgeContent > div {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
