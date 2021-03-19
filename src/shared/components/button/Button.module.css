@@ -13,6 +13,13 @@
   color: var(--secondary-color);
 }
 
+.Button:disabled {
+  background-color: rgba(var(--primary-color-rgb), 0.85);
+  border-color: rgba(var(--primary-color-rgb), 0.9);
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
 .Button:focus,
 .IconButton:focus {
   box-shadow: none;
@@ -22,6 +29,12 @@
   color: var(--primary-color);
   font-size: 1.6rem;
   padding: var(--pd);
+}
+
+.IconButton:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  background: transparent !important;
 }
 
 .IconButton:hover {

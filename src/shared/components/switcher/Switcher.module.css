@@ -1,0 +1,56 @@
+.Switcher {
+  cursor: pointer;
+  position: relative;
+}
+
+.Switcher > input[type="checkbox"] {
+  display: none;
+}
+
+.Switcher .SwitcherLabel {
+  display: inline-block;
+  /* color: var(--text-color); */
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding-right: 45px;
+  user-select: none;
+}
+
+.Switcher .SwitcherLabel::before,
+.Switcher .SwitcherLabel::after {
+  transition: all 0.3s linear;
+}
+
+.Switcher .SwitcherLabel::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 20px;
+  border-radius: 20px;
+  border: 1px solid var(--primary-color);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.Switcher .SwitcherLabel:hover::before {
+  border-color: var(--primary-color-dark);
+}
+
+.Switcher .SwitcherLabel::after {
+  content: "";
+  border-radius: 12px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: calc(40px - 4px - 12px);
+}
+
+.Switcher > input:checked + .SwitcherLabel::after {
+  right: 4px;
+  background-color: var(--primary-color-dark);
+}

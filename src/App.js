@@ -8,6 +8,7 @@ import Avatar from "./shared/components/avatar/Avatar";
 import IconButton from "./shared/components/button/IconButton";
 import Badge from "./shared/components/badge/Badge";
 import CheckButton from "./shared/components/check-button/CheckButton";
+import Switcher from "./shared/components/switcher/Switcher";
 import UserInfo from "./shared/components/navigation/user-info/UserInfo";
 import Select from "./shared/components/select/Select";
 import Carousel from "./shared/components/carousel/Carousel";
@@ -18,13 +19,18 @@ function App() {
   const [state, setstate] = useState("");
   return (
     <div style={{ padding: "10px" }}>
-      <IconButton
+      <Switcher name="Switch" changed={() => {}}>
+        Available
+      </Switcher>
+
+      {/* <IconButton
+        disabled
         clicked={() => {
           console.log("cliked");
         }}
       >
         <FaTimes />
-      </IconButton>
+      </IconButton> */}
       {/* <ProfileHistory /> */}
       {/* <Carousel
         data={[
