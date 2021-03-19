@@ -1,21 +1,43 @@
+.BadgeContainer {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min-content;
+}
+
 .Badge {
   display: inline-flex;
   position: relative;
   flex-shrink: 0;
   vertical-align: middle;
   border-radius: 50%;
-  padding: calc(var(--pd) * 0.4);
+  background: var(--secondary-color);
 }
 
 .BadgeContent {
   position: absolute;
   right: -5px;
   top: -5px;
-  border: 2px solid #fff;
+  border: 1.5px solid #fff;
   border-radius: 50%;
 }
 
 .BadgeContent > div {
   background: var(--primary-color);
   color: var(--secondary-color);
+}
+
+.Shadow {
+  padding: calc(var(--pd) * 0.4);
+}
+
+.Label {
+  padding-top: .4rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  text-transform: capitalize;
+  text-align: center;
+  line-height: 1.2;
 }

@@ -9,19 +9,71 @@ import Badge from "./shared/components/badge/Badge";
 import CheckButton from "./shared/components/check-button/CheckButton";
 import UserInfo from "./shared/components/navigation/user-info/UserInfo";
 import Select from "./shared/components/select/Select";
+import Carousel from "./shared/components/carousel/Carousel";
 
 function App() {
   const [state, setstate] = useState("");
   return (
     <div style={{ padding: "10px" }}>
-      <ProfileCard
+      <Carousel
+        data={[
+          {
+            id: "1",
+            title: "Blood Donation Campaign 2021",
+            by: "Admin",
+            time: "1 minute ago",
+            held: "Held on Today",
+            img: img,
+            path: "#",
+          },
+          {
+            id: "2",
+            title: "Blood Donation Campaign 2021",
+            by: "Admin",
+            time: "1 minute ago",
+            held: "Held on Today",
+            img: img,
+            path: "#",
+          },
+          {
+            id: "3",
+            title: "Blood Donation Campaign 2021",
+            by: "Admin",
+            time: "1 minute ago",
+            held: "Held on Today",
+            img: img,
+            path: "#",
+          },
+          {
+            id: "4",
+            title: "Blood Donation Campaign 2021",
+            by: "Admin",
+            time: "1 minute ago",
+            held: "Held on Today",
+            img: img,
+            path: "#",
+          },
+        ]}
+      />
+      {/* <Badge
+        shadow
+        label="My Request"
+        badgeContent={
+          <Avatar height={25} width={25}>
+            9+
+          </Avatar>
+        }
+      >
+        <Avatar height={50} width={50} src={img} alt="icon" />
+      </Badge> */}
+      {/* <ProfileCard
         user={{
           name: "Ashu Priya",
           status: "Beginner Donor",
           group: "O+",
           img: img,
         }}
-      />
+      /> */}
       {/* <ProfileBadge title="Life Saver" img={img} active />
       <ProfileBadge title="Fast" img={img} /> */}
       {/* <NotificationCard
