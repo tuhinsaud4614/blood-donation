@@ -4,8 +4,9 @@ const Divider = ({ type = "vertical" }) => {
   const style = {
     height: "100%",
     width: "2px",
-    margin: "0 var(--pd)",
-    background: "var(--secondary-color)",
+    margin: "0 calc(var(--pd) * 2)",
+    background: "var(--text-color)",
+    flexShrink: "0"
   };
   if (type === "horizontal") {
     style.height = "2px";

@@ -16,22 +16,16 @@ import ProfileHistory from "./pages/profile/components/profile-history/ProfileHi
 import { FiSearch } from "react-icons/fi";
 import SearchBox from "./shared/components/search-box/SearchBox";
 import Ranger from "./shared/components/ranger/Ranger";
+import ToggleButton from "./shared/components/toggle-button/ToggleButton";
 
 function App() {
   const [state, setState] = useState("1");
   return (
     <div style={{ padding: "10px" }}>
-      <Ranger
-        value={state}
-        step="5"
-        start="0"
-        end="100"
-        changed={(e) => {
-          console.log(e.target.value);
-          setState(e.target.value);
-        }}
-        label="Set Distance"
-        name="range"
+      <ToggleButton
+        changed={(e) => console.log(e.target.value)}
+        name="Toggle"
+        values={["Hospital", "Donor"]}
       />
       {/* <SearchBox
         id="text"
