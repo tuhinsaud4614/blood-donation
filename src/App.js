@@ -10,12 +10,14 @@ import CheckButton from "./shared/components/check-button/CheckButton";
 import UserInfo from "./shared/components/navigation/user-info/UserInfo";
 import Select from "./shared/components/select/Select";
 import Carousel from "./shared/components/carousel/Carousel";
+import ProfileHistory from "./pages/profile/components/profile-history/ProfileHistory";
 
 function App() {
   const [state, setstate] = useState("");
   return (
     <div style={{ padding: "10px" }}>
-      <Carousel
+      <ProfileHistory />
+      {/* <Carousel
         data={[
           {
             id: "1",
@@ -54,7 +56,7 @@ function App() {
             path: "#",
           },
         ]}
-      />
+      /> */}
       {/* <Badge
         shadow
         label="My Request"

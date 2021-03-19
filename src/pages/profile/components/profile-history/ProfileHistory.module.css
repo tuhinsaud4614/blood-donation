@@ -1,0 +1,94 @@
+.History {
+  width: 100%;
+  padding: var(--pd) calc(var(--pd) * 2);
+  border-radius: var(--border-radius);
+}
+
+.Header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.HeaderNav {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: var(--pd);
+  transition: all 0.3s linear;
+  display: inline-block;
+}
+
+.HeaderNav::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  right: 15%;
+  background: var(--primary-color);
+  height: 2px;
+  visibility: hidden;
+}
+
+.HeaderNav:hover,
+.Active {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.HeaderNav:hover::before,
+.Active::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.HistoryTable {
+  padding: var(--pd);
+}
+
+.HistoryItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--pd);
+}
+
+.HistoryItemLeft,
+.HistoryItemMid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.HistoryItemMid {
+  align-items: flex-start;
+}
+
+.HistoryItemLeft > span:first-child {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.HistoryItemLeft > span:last-child {
+  font-size: 2.3rem;
+  font-weight: bolder;
+}
+
+.HistoryItemMid > span {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.HistoryItemMid > h3 {
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
+
+.HistoryItemRight {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  align-self: flex-end;
+}
