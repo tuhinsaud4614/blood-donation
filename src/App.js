@@ -5,18 +5,27 @@ import ProfileBadge from "./pages/profile/components/profile-badge/ProfileBadge"
 import ProfileCard from "./pages/profile/components/profile-card/ProfileCard";
 
 import Avatar from "./shared/components/avatar/Avatar";
+import IconButton from "./shared/components/button/IconButton";
 import Badge from "./shared/components/badge/Badge";
 import CheckButton from "./shared/components/check-button/CheckButton";
 import UserInfo from "./shared/components/navigation/user-info/UserInfo";
 import Select from "./shared/components/select/Select";
 import Carousel from "./shared/components/carousel/Carousel";
 import ProfileHistory from "./pages/profile/components/profile-history/ProfileHistory";
+import { FaTimes } from "react-icons/fa";
 
 function App() {
   const [state, setstate] = useState("");
   return (
     <div style={{ padding: "10px" }}>
-      <ProfileHistory />
+      <IconButton
+        clicked={() => {
+          console.log("cliked");
+        }}
+      >
+        <FaTimes />
+      </IconButton>
+      {/* <ProfileHistory /> */}
       {/* <Carousel
         data={[
           {

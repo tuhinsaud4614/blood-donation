@@ -8,6 +8,7 @@
 
 :root {
   --primary-color: #8a0303;
+  --primary-color-rgb: 138, 3, 3;
   --primary-color-dark: #770000;
   --secondary-color: #edf0f5;
   --text-color: #4a4a4a;
