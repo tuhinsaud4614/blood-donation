@@ -15,12 +15,25 @@ import Carousel from "./shared/components/carousel/Carousel";
 import ProfileHistory from "./pages/profile/components/profile-history/ProfileHistory";
 import { FiSearch } from "react-icons/fi";
 import SearchBox from "./shared/components/search-box/SearchBox";
+import Ranger from "./shared/components/ranger/Ranger";
 
 function App() {
-  const [state, setstate] = useState("");
+  const [state, setState] = useState("1");
   return (
     <div style={{ padding: "10px" }}>
-      <SearchBox
+      <Ranger
+        value={state}
+        step="5"
+        start="0"
+        end="100"
+        changed={(e) => {
+          console.log(e.target.value);
+          setState(e.target.value);
+        }}
+        label="Set Distance"
+        name="range"
+      />
+      {/* <SearchBox
         id="text"
         name="text"
         placeholder="Search here"
@@ -32,7 +45,7 @@ function App() {
           
         }}
         icon={<FiSearch />}
-      />
+      /> */}
       {/* <Switcher name="Switch" changed={() => {}}>
         Available
       </Switcher> */}
