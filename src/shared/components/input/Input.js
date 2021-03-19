@@ -17,7 +17,7 @@ const Input = ({
       <input
         id={id}
         name={name}
-        type=""
+        type={type}
         className={`form-control ${classes.Input}`}
         value={value}
         placeholder={placeholder}

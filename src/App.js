@@ -13,15 +13,29 @@ import UserInfo from "./shared/components/navigation/user-info/UserInfo";
 import Select from "./shared/components/select/Select";
 import Carousel from "./shared/components/carousel/Carousel";
 import ProfileHistory from "./pages/profile/components/profile-history/ProfileHistory";
-import { FaTimes } from "react-icons/fa";
+import { FiSearch } from "react-icons/fi";
+import SearchBox from "./shared/components/search-box/SearchBox";
 
 function App() {
   const [state, setstate] = useState("");
   return (
     <div style={{ padding: "10px" }}>
-      <Switcher name="Switch" changed={() => {}}>
+      <SearchBox
+        id="text"
+        name="text"
+        placeholder="Search here"
+        value={state}
+        changed={(e) => {
+          setstate(e.target.value);
+        }}
+        submitted={(e) => {
+          
+        }}
+        icon={<FiSearch />}
+      />
+      {/* <Switcher name="Switch" changed={() => {}}>
         Available
-      </Switcher>
+      </Switcher> */}
 
       {/* <IconButton
         disabled
