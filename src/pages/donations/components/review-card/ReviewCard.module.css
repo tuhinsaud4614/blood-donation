@@ -1,0 +1,67 @@
+.ReviewCard {
+  border-radius: var(--border-radius);
+  padding: var(--pd);
+  width: fit-content;
+}
+
+.Head {
+  display: flex;
+  align-items: center;
+  padding: var(--pd);
+}
+
+.HeadRight {
+  padding: 0 var(--pd);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.HeadRight > h4 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: bolder;
+}
+
+.HeadRight > span {
+  font-size: 1.2rem;
+}
+
+.Body {
+  margin: 0;
+  padding: var(--pd);
+  font-size: 1.3rem;
+}
+
+.Foot {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.Foot > span {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: var(--pd);
+  user-select: none;
+  transition: all 0.3s linear;
+  margin-left: var(--pd);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+}
+
+.Foot > span:hover {
+  color: var(--primary-color-dark);
+  background: rgba(var(--primary-color-rgb), 0.3);
+}
+
+.Foot > span > svg {
+  margin-right: calc(var(--pd) * 0.5);
+}
+
+.Foot > span:last-child > svg {
+  transform: scaleX(-1);
+}
