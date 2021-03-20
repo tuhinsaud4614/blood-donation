@@ -1,0 +1,39 @@
+.DonationHistory {
+  border-radius: var(--border-radius);
+  padding: var(--pd);
+  width: max-content;
+}
+
+.Head {
+  font-size: 1.8rem;
+  font-weight: bolder;
+  /* margin: 0; */
+}
+
+.Body {
+  padding: var(--pd);
+}
+
+.Item {
+  display: flex;
+  align-items: center;
+}
+
+.ItemAvatar {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 1.4rem;
+}
+
+.ItemRight {
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: calc(var(--pd) * 1.5);
+}
+
+.ItemRight > span {
+  font-size: 1.4rem;
+  font-weight: bolder;
+}

@@ -21,17 +21,26 @@ import Sidebar from "./shared/components/navigation/sidebar/Sidebar";
 import Statistics from "./shared/components/statistics/Statistics";
 import ReviewCard from "./pages/donations/components/review-card/ReviewCard";
 import HospitalCard from "./pages/donations/components/hospital-card/HospitalCard";
+import DonationHistory from "./pages/donations/components/donation-history/DonationHistory";
 
 function App() {
   const [state, setState] = useState("1");
   return (
     <div>
-      <HospitalCard
+      <DonationHistory
+        units={50}
+        data={[
+          { id: "1", hospital: "Kingsland Hospital", count: 2 },
+          { id: "2", hospital: "Kingsland Hospital", count: 1 },
+          { id: "3", hospital: "Kingsland Hospital", count: 1 },
+        ]}
+      />
+      {/* <HospitalCard
         clicked={() => {}}
         name="Musa Clinic"
         address="21/3,Los Angeles, CA"
         date="Monday 2 Jan, 11:08"
-      />
+      /> */}
       {/* <ReviewCard
         reviewer={{ name: "Ashik Prottoy", date: "Dec 27", img: img }}
         description={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ipsum distinctio quam, obcaecati eum nulla? Adipisci modi repellendus impedit ullam. Sed enim facilis quos numquam amet rem! Vero dolorem cumque, odit laborum laudantium blanditiis adipisci quos, soluta quidem molestiae facere quis harum optio mollitia ipsa repellendus quod quisquam libero labore.`}
