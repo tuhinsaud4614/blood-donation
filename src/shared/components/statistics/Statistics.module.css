@@ -1,0 +1,20 @@
+.Statistics {
+  border-radius: var(--border-radius);
+  padding: var(--pd);
+  width: min-content;
+}
+
+.Head > h3 {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  margin: 0;
+}
+
+.Head > span {
+  font-size: 1.2rem;
+}
+
+.Statistics > img {
+  width: 220px;
+  height: 100px;
+}

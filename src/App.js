@@ -18,12 +18,14 @@ import SearchBox from "./shared/components/search-box/SearchBox";
 import Ranger from "./shared/components/ranger/Ranger";
 import ToggleButton from "./shared/components/toggle-button/ToggleButton";
 import Sidebar from "./shared/components/navigation/sidebar/Sidebar";
+import Statistics from "./shared/components/statistics/Statistics";
 
 function App() {
   const [state, setState] = useState("1");
   return (
     <div>
-      <Sidebar/>
+      <Statistics/>
+      {/* <Sidebar/> */}
       {/* <ToggleButton
         changed={(e) => console.log(e.target.value)}
         name="Toggle"
