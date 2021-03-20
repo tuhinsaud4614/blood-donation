@@ -1,0 +1,53 @@
+.Sidebar {
+  /* height: inherit; */
+  height: 100vh;
+  max-width: calc(200px + var(--pd));
+  background-color: #fff;
+  padding: calc(var(--pd) * 1.5) var(--pd);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--pd);
+}
+
+.HeaderLogo {
+  font-size: 0.7rem;
+}
+
+.Foot {
+  position: relative;
+  border-radius: calc(var(--border-radius) * 2);
+  height: 220px !important;
+  width: calc(200px - var(--pd));
+  overflow: hidden;
+}
+
+.FootImg {
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+  background-color: rgba(255, 94, 0, 0.6);
+}
+
+.FootText {
+  position: absolute;
+  top: calc(var(--pd) * 2);
+  left: calc(var(--pd) * 2);
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.FootLogo {
+  position: absolute;
+  top: var(--pd);
+  right: var(--pd);
+  /* transform: scale(0.5); */
+  font-size: 0.4rem;
+}

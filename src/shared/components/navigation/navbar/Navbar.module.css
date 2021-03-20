@@ -1,0 +1,46 @@
+.Nav {
+  flex: 1;
+  padding: var(--pd);
+}
+
+.NavItems {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.NavItem {
+  display: inline-flex;
+  width: 100%;
+}
+
+.NavItemLink {
+  width: inherit;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--pd) * 1.5) calc(var(--pd) * 2);
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: all 0.3s linear;
+  overflow: hidden;
+  border-right: 5px solid transparent;
+}
+
+.NavItemLink > span {
+  margin-left: calc(var(--pd) * 1.5);
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.NavItemLink:hover,
+.Active {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  border-color: var(--primary-color);
+}
