@@ -1,5 +1,5 @@
 import classes from "./Statistics.module.css";
-import img from "../../../assets/img/statistics.PNG";
+import img from "../../../assets/img/statistics.png";
 
 const Statistics = () => {
   return (

@@ -1,0 +1,52 @@
+.HospitalCard {
+  border-radius: var(--border-radius);
+  padding: var(--pd);
+  width: max-content;
+  position: relative;
+}
+
+.Action {
+  position: absolute;
+  right: var(--pd);
+  top: var(--pd);
+  text-align: right;
+  padding: calc(var(--pd) * 0.5);
+}
+
+.Content {
+  padding: var(--pd);
+  padding-top: calc(var(--pd) * 3);
+  display: flex;
+  align-items: center;
+}
+
+.Avatar {
+    background: var(--secondary-color);
+}
+
+.Avatar > img {
+    transform: scale(.5);
+}
+
+.ContentRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: calc(var(--pd) * 1.5);
+}
+
+.ContentRight > h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
+
+.ContentRight > span {
+  /* padding: var(--pd) 0; */
+  font-size: 1.1rem;
+}
+
+.ContentRight > span > svg {
+  margin-right: var(--pd);
+}
