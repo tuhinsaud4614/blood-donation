@@ -22,19 +22,67 @@ import Statistics from "./shared/components/statistics/Statistics";
 import ReviewCard from "./pages/donations/components/review-card/ReviewCard";
 import HospitalCard from "./pages/donations/components/hospital-card/HospitalCard";
 import DonationHistory from "./pages/donations/components/donation-history/DonationHistory";
+import Map from "./shared/components/map/Map";
+import ListTile from "./shared/components/map/list-tile/ListTile";
+import { IoMaleSharp } from "react-icons/io5";
 
 function App() {
   const [state, setState] = useState("1");
   return (
-    <div>
-      <DonationHistory
+    <div style={{ padding: "20px" }}>
+      <ListTile
+        address="26 North Camelia, LA, 45569"
+        bloodGroup="AB+"
+        img={img}
+        mobile="88019319311"
+        title="John Doe"
+        status="available"
+        titleIcon={<IoMaleSharp />}
+        rating={2}
+        expandData={{
+          reviewer: {
+            count: 2,
+            name: "John ",
+            img: img,
+            date: "7 Dec",
+            description:
+              "Lorem ipsum dolor sit, amet consectetur adipisicing elit!",
+          },
+          hospital: { period: "Current" },
+        }}
+      />
+      <ListTile
+        address="26 North Camelia, LA, 45569"
+        // bloodGroup="AB+"
+        img={img}
+        mobile="88019319311"
+        title="John Doe"
+        status="open now"
+        // titleIcon={<IoMaleSharp />}
+        rating={2}
+        expandData={{
+          reviewer: {
+            count: 2,
+            name: "John ",
+            img: img,
+            date: "7 Dec",
+            description:
+              "Lorem ipsum dolor sit, amet consectetur adipisicing elit!",
+          },
+          hospital: { period: "Center Hours" },
+        }}
+      />
+      {/* <Map>
+        <div>hello</div>
+      </Map> */}
+      {/* <DonationHistory
         units={50}
         data={[
           { id: "1", hospital: "Kingsland Hospital", count: 2 },
           { id: "2", hospital: "Kingsland Hospital", count: 1 },
           { id: "3", hospital: "Kingsland Hospital", count: 1 },
         ]}
-      />
+      /> */}
       {/* <HospitalCard
         clicked={() => {}}
         name="Musa Clinic"

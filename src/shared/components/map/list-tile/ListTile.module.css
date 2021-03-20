@@ -1,0 +1,215 @@
+.ListTile {
+  border-radius: var(--border-radius);
+  padding: var(--pd);
+  width: max-content;
+  min-width: 220px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Expanded {
+  padding: 0;
+  display: block;
+}
+
+.FloatIcon {
+  position: absolute;
+  top: -15px;
+  right: 15px;
+  height: 27px;
+  width: 27px;
+}
+
+.FloatIcon > img {
+  height: inherit;
+  width: inherit;
+}
+
+.FloatIcon > span {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Body {
+  margin-left: var(--pd);
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.Body > h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.Body > div {
+  width: 100%;
+}
+
+.TitleIcon {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-left: var(--pd);
+}
+
+.BodyBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+
+.BodyBottom > span:last-child {
+  font-weight: bold;
+}
+
+/* LitTileExpanded Top */
+
+.ListTileExpandedTop {
+  padding: var(--pd) calc(var(--pd) * 2);
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.ListTileExpandedTopLeft,
+.ListTileExpandedTopRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.ListTileExpandedTopLeft > h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.ListTileExpandedTopLeftDown {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ListTileExpandedTopRight {
+  align-items: flex-end;
+  font-size: 1.2rem;
+}
+
+.ListTileExpandedTopRight > span:last-child {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+  text-transform: capitalize;
+}
+
+/* ListTileExpandedBottomReviewer */
+
+.ListTileExpandedBottomReviewer > h4 {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  margin: 0;
+  padding: 0 calc(var(--pd) * 2);
+}
+
+.ListTileExpandedBottomReviewer > h4 > span {
+  margin-left: var(--pd);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ReviewerBody {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: var(--pd);
+  padding-top: 0;
+}
+
+.ReviewerBodyLeft {
+  padding-right: var(--pd);
+}
+
+.ReviewerBodyLeftHead {
+  display: flex;
+  align-items: center;
+  padding: var(--pd);
+}
+
+.ReviewerBodyLeftHeadRight {
+  padding: 0 var(--pd);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.ReviewerBodyLeftHeadRight > h4 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: bolder;
+}
+
+.ReviewerBodyLeftHeadRight > span {
+  font-size: 1.2rem;
+}
+
+.ReviewerBodyLeftBody {
+  margin: 0;
+  padding: 0 var(--pd);
+  font-size: 1.3rem;
+  max-width: 230px;
+  text-align: justify;
+}
+
+.ReviewerBodyButton {
+  font-size: 1.3rem;
+  border-radius: var(--border-radius);
+}
+
+/* ListTileExpandedBottomHospital */
+.ListTileExpandedBottomHospital {
+  padding: var(--pd) calc(var(--pd) * 2);
+  padding-top: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.HospitalLeft {
+  margin-right: var(--pd);
+}
+
+.HospitalLeft > h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: calc(var(--pd) * 2);
+}
+
+.HospitalLeft > p {
+  font-size: 1.2rem;
+  /* max-width: 230px; */
+}
+
+.HospitalLeft > h4 {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin: 0;
+}

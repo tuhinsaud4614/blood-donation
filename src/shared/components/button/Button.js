@@ -8,11 +8,14 @@ const Button = ({
   disabled = false,
   blocked,
   children,
+  className,
 }) => {
   return (
     <button
       type={type}
-      className={`btn ${classes.Button} ${blocked ? " btn-block" : ""}`}
+      className={`btn ${classes.Button} ${
+        blocked ? " btn-block" : ""
+      } ${className}`}
       onClick={clicked}
       disabled={disabled}
     >
@@ -27,6 +30,7 @@ Button.propTypes = {
   type: PropTypes.oneOf(["button", "submit", "reset"]),
   children: PropTypes.string.isRequired,
   blocked: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 export default Button;
