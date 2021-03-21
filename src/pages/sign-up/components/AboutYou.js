@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
+import { FaEye } from "react-icons/fa";
 
 import {
-  IS_PHONE,
-  IS_URL,
+  IS_EMAIL,
   removeMultiSpace,
   REQUIRED,
   validate,
@@ -13,20 +13,20 @@ import Button from "../../../shared/components/button/Button";
 import Input from "../../../shared/components/input/Input";
 import classes from "../SignUp.module.css";
 
-const ContractInfo = ({ index, submitted }) => {
+const AboutYou = ({ index, submitted }) => {
   const [formState, changeFunc] = useForm({
     form: {
-      phone: {
+      username: {
         value: "",
         valid: false,
       },
-      altPhone: {
+      email: {
         value: "",
         valid: false,
       },
-      socialLink: {
+      password: {
         value: "",
-        valid: true,
+        valid: false,
       },
     },
     formIsValid: false,
@@ -35,9 +35,9 @@ const ContractInfo = ({ index, submitted }) => {
   const submitHandler = () => {
     if (formState.formIsValid) {
       submitted(index + 1, {
-        phone: formState.form.phone.value,
-        altPhone: formState.form.altPhone.value,
-        socialLink: formState.form.socialLink.value,
+        username: formState.form.username.value,
+        email: formState.form.email.value,
+        password: formState.form.password.value,
       });
     }
   };
@@ -45,13 +45,13 @@ const ContractInfo = ({ index, submitted }) => {
   const changeHandler = (e) => {
     const id = e.target.name;
     const value = removeMultiSpace(e.target.value);
-    if (id.toString() === "phone") {
-      changeFunc(id, value, validate(value, [REQUIRED, IS_PHONE]));
-    } else if (id.toString() === "altPhone") {
-      changeFunc(id, value, validate(value, [REQUIRED, IS_PHONE]));
-    } else if (id.toString() === "socialLink") {
+    if (id.toString() === "username") {
+      changeFunc(id, value, validate(value, [REQUIRED]));
+    } else if (id.toString() === "email") {
+      changeFunc(id, value, validate(value, [REQUIRED, IS_EMAIL]));
+    } else if (id.toString() === "password") {
       if (value !== "") {
-        changeFunc(id, value, validate(value, [IS_URL]));
+        changeFunc(id, value, validate(value, [REQUIRED]));
       } else {
         changeFunc(id, value, true);
       }
@@ -60,42 +60,43 @@ const ContractInfo = ({ index, submitted }) => {
   // console.log(formState);
   return (
     <SignUpContainer
-      title="Contract Information"
-      info="Please provide correct phone no. This information will keep safe."
+      title="Let Us Know About You"
+      info="Provide your real name for your identity. Your name will be used for search"
     >
       <>
         <div className={`form-group pb-2`}>
-          <label htmlFor="phone">Phone No</label>
+          <label htmlFor="username">Username</label>
           <Input
-            value={formState.form.phone.value}
-            placeholder="018"
+            value={formState.form.username.value}
+            placeholder="johndoe"
             type="text"
-            name="phone"
-            id="phone"
+            name="username"
+            id="username"
             changed={changeHandler}
             required
           />
         </div>
         <div className={`form-group pb-2`}>
-          <label htmlFor="altPhone">Alternative Phone No</label>
+          <label htmlFor="email">Email</label>
           <Input
-            value={formState.form.altPhone.value}
-            placeholder="017"
-            type="text"
-            name="altPhone"
-            id="altPhone"
+            value={formState.form.email.value}
+            placeholder="johndoe@gmail.com"
+            type="email"
+            name="email"
+            id="email"
             changed={changeHandler}
             required
           />
         </div>
         <div className={`form-group pb-4`}>
-          <label htmlFor="socialLink">Social(Optional)</label>
+          <label htmlFor="password">Password</label>
           <Input
-            value={formState.form.socialLink.value}
-            placeholder="https://"
-            type="url"
-            name="socialLink"
-            id="socialLink"
+            icon={<FaEye />}
+            value={formState.form.password.value}
+            placeholder="*****"
+            type="password"
+            name="password"
+            id="password"
             changed={changeHandler}
           />
         </div>
@@ -113,9 +114,9 @@ const ContractInfo = ({ index, submitted }) => {
   );
 };
 
-ContractInfo.propTypes = {
+AboutYou.propTypes = {
   index: PropTypes.number.isRequired,
   submitted: PropTypes.func.isRequired,
 };
 
-export default ContractInfo;
+export default AboutYou;

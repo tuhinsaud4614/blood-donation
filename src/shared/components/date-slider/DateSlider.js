@@ -18,7 +18,7 @@ function closeItems(start, len, arr) {
   return newArr;
 }
 
-function DateSlider({ closeItemNum, items, children }) {
+function DateSlider({ closeItemNum, changed, items, name, children }) {
   const modifiedItems = useMemo(() => {
     return items.map((item, index) => {
       return { id: index, value: item };
@@ -41,6 +41,7 @@ function DateSlider({ closeItemNum, items, children }) {
       modifiedItems[id],
       ...closeItems(id + 1, closeItemNum, modifiedItems),
     ]);
+    changed(name, modifiedItems[id].value);
   };
 
   return (
@@ -69,8 +70,10 @@ function DateSlider({ closeItemNum, items, children }) {
 }
 
 DateSlider.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.string),
+  items: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   closeItemNum: PropTypes.number,
+  changed: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default DateSlider;

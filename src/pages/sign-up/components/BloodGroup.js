@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { removeMultiSpace, REQUIRED, validate } from "../../../shared/utils";
 import useForm from "../../../shared/hooks/form-hook";
 import SignUpContainer from "./SignUpContainer";
@@ -5,7 +7,7 @@ import CircleRadio from "../../../shared/components/radio-button/CircleRadio";
 import classes from "../SignUp.module.css";
 import Button from "../../../shared/components/button/Button";
 
-const BloodGroup = () => {
+const BloodGroup = ({ index, submitted }) => {
   const [formState, changeFunc] = useForm({
     form: {
       bloodGroup: {
@@ -16,9 +18,10 @@ const BloodGroup = () => {
     formIsValid: true,
   });
 
-  const submitHandler = (e) => {
-    //   e.preventDefault();
-    console.log("submitted");
+  const submitHandler = () => {
+    if (formState.formIsValid) {
+      submitted(index + 1, formState.form.bloodGroup.value);
+    }
   };
 
   const changeHandler = (e) => {
@@ -26,7 +29,7 @@ const BloodGroup = () => {
     const value = removeMultiSpace(e.target.value);
     changeFunc(id, value, validate(value, [REQUIRED]));
   };
-  console.log(formState);
+  // console.log(formState);
   return (
     <SignUpContainer
       title="What is your blood group"
@@ -75,7 +78,7 @@ const BloodGroup = () => {
           </div>
         </div>
         <Button
-          type="submit"
+          type="button"
           disabled={!formState.formIsValid}
           blocked
           clicked={submitHandler}
@@ -86,6 +89,11 @@ const BloodGroup = () => {
       </>
     </SignUpContainer>
   );
+};
+
+BloodGroup.propTypes = {
+  index: PropTypes.number.isRequired,
+  submitted: PropTypes.func.isRequired,
 };
 
 export default BloodGroup;

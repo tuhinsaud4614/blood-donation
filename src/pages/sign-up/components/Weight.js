@@ -1,4 +1,5 @@
 import { FaArrowAltCircleUp, FaArrowAltCircleDown } from "react-icons/fa";
+import PropTypes from "prop-types";
 
 import { removeMultiSpace} from "../../../shared/utils";
 import useForm from "../../../shared/hooks/form-hook";
@@ -8,7 +9,7 @@ import Button from "../../../shared/components/button/Button";
 import img from "../../../assets/img/weight.png";
 import classes from "../SignUp.module.css";
 
-const Weight = () => {
+const Weight = ({ index, submitted }) => {
   const [formState, changeFunc] = useForm({
     form: {
       weight: {
@@ -19,9 +20,10 @@ const Weight = () => {
     formIsValid: false,
   });
 
-  const submitHandler = (e) => {
-    //   e.preventDefault();
-    console.log("submitted");
+  const submitHandler = () => {
+    if (formState.formIsValid) {
+      submitted(index + 1, formState.form.weight.value);
+    }
   };
 
   const changeHandler = (e) => {
@@ -33,7 +35,7 @@ const Weight = () => {
       changeFunc(id, value, false);
     }
   };
-  console.log(formState);
+  // console.log(formState);
   return (
     <SignUpContainer
     formClass={`${classes.WeightForm}`}
@@ -63,7 +65,7 @@ const Weight = () => {
           </ImageRadio>
         </div>
         <Button
-          type="submit"
+          type="button"
           disabled={!formState.formIsValid}
           blocked
           clicked={submitHandler}
@@ -74,6 +76,11 @@ const Weight = () => {
       </>
     </SignUpContainer>
   );
+};
+
+Weight.propTypes = {
+  index: PropTypes.number.isRequired,
+  submitted: PropTypes.func.isRequired,
 };
 
 export default Weight;

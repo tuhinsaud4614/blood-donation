@@ -1,32 +1,26 @@
 import PropTypes from "prop-types";
 
-import {
-  IS_PHONE,
-  IS_URL,
-  removeMultiSpace,
-  REQUIRED,
-  validate,
-} from "../../../shared/utils";
+import { removeMultiSpace, REQUIRED, validate } from "../../../shared/utils";
 import useForm from "../../../shared/hooks/form-hook";
 import SignUpContainer from "./SignUpContainer";
 import Button from "../../../shared/components/button/Button";
 import Input from "../../../shared/components/input/Input";
 import classes from "../SignUp.module.css";
 
-const ContractInfo = ({ index, submitted }) => {
+const Address = ({ index, submitted }) => {
   const [formState, changeFunc] = useForm({
     form: {
-      phone: {
+      street: {
         value: "",
         valid: false,
       },
-      altPhone: {
+      city: {
         value: "",
         valid: false,
       },
-      socialLink: {
+      postCode: {
         value: "",
-        valid: true,
+        valid: false,
       },
     },
     formIsValid: false,
@@ -35,9 +29,9 @@ const ContractInfo = ({ index, submitted }) => {
   const submitHandler = () => {
     if (formState.formIsValid) {
       submitted(index + 1, {
-        phone: formState.form.phone.value,
-        altPhone: formState.form.altPhone.value,
-        socialLink: formState.form.socialLink.value,
+        street: formState.form.street.value,
+        city: formState.form.city.value,
+        postCode: formState.form.postCode.value,
       });
     }
   };
@@ -45,57 +39,47 @@ const ContractInfo = ({ index, submitted }) => {
   const changeHandler = (e) => {
     const id = e.target.name;
     const value = removeMultiSpace(e.target.value);
-    if (id.toString() === "phone") {
-      changeFunc(id, value, validate(value, [REQUIRED, IS_PHONE]));
-    } else if (id.toString() === "altPhone") {
-      changeFunc(id, value, validate(value, [REQUIRED, IS_PHONE]));
-    } else if (id.toString() === "socialLink") {
-      if (value !== "") {
-        changeFunc(id, value, validate(value, [IS_URL]));
-      } else {
-        changeFunc(id, value, true);
-      }
-    }
+    changeFunc(id, value, validate(value, [REQUIRED]));
   };
   // console.log(formState);
   return (
     <SignUpContainer
-      title="Contract Information"
-      info="Please provide correct phone no. This information will keep safe."
+      title="Where DO You Live?"
+      info="Please provide correct address. This information will keep safe."
     >
       <>
         <div className={`form-group pb-2`}>
-          <label htmlFor="phone">Phone No</label>
+          <label htmlFor="street">Street Address</label>
           <Input
-            value={formState.form.phone.value}
-            placeholder="018"
+            value={formState.form.street.value}
+            placeholder="123/4, Saint Road"
             type="text"
-            name="phone"
-            id="phone"
+            name="street"
+            id="street"
             changed={changeHandler}
             required
           />
         </div>
         <div className={`form-group pb-2`}>
-          <label htmlFor="altPhone">Alternative Phone No</label>
+          <label htmlFor="city">City</label>
           <Input
-            value={formState.form.altPhone.value}
-            placeholder="017"
+            value={formState.form.city.value}
+            placeholder="Dhaka"
             type="text"
-            name="altPhone"
-            id="altPhone"
+            name="city"
+            id="city"
             changed={changeHandler}
             required
           />
         </div>
         <div className={`form-group pb-4`}>
-          <label htmlFor="socialLink">Social(Optional)</label>
+          <label htmlFor="postCode">Postal Code</label>
           <Input
-            value={formState.form.socialLink.value}
-            placeholder="https://"
-            type="url"
-            name="socialLink"
-            id="socialLink"
+            value={formState.form.postCode.value}
+            placeholder="XXXX"
+            type="number"
+            name="postCode"
+            id="postCode"
             changed={changeHandler}
           />
         </div>
@@ -113,9 +97,9 @@ const ContractInfo = ({ index, submitted }) => {
   );
 };
 
-ContractInfo.propTypes = {
+Address.propTypes = {
   index: PropTypes.number.isRequired,
   submitted: PropTypes.func.isRequired,
 };
 
-export default ContractInfo;
+export default Address;

@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { removeMultiSpace } from "../../../shared/utils";
 import useForm from "../../../shared/hooks/form-hook";
 import SignUpContainer from "./SignUpContainer";
@@ -7,7 +9,7 @@ import maleImg from "../../../assets/img/male.png";
 import femaleImg from "../../../assets/img/female.png";
 import classes from "../SignUp.module.css";
 
-const Gender = () => {
+const Gender = ({ index, submitted }) => {
   const [formState, changeFunc] = useForm({
     form: {
       gender: {
@@ -18,9 +20,10 @@ const Gender = () => {
     formIsValid: true,
   });
 
-  const submitHandler = (e) => {
-    //   e.preventDefault();
-    console.log("submitted");
+  const submitHandler = () => {
+    if (formState.formIsValid) {
+      submitted(index + 1, formState.form.gender.value);
+    }
   };
 
   const changeHandler = (e) => {
@@ -28,7 +31,7 @@ const Gender = () => {
     const value = removeMultiSpace(e.target.value);
     changeFunc(id, value, true);
   };
-  console.log(formState);
+  // console.log(formState);
   return (
     <SignUpContainer
       formClass={`${classes.WeightForm}`}
@@ -56,7 +59,7 @@ const Gender = () => {
           </ImageRadio>
         </div>
         <Button
-          type="submit"
+          type="button"
           disabled={!formState.formIsValid}
           blocked
           clicked={submitHandler}
@@ -67,6 +70,11 @@ const Gender = () => {
       </>
     </SignUpContainer>
   );
+};
+
+Gender.propTypes = {
+  index: PropTypes.number.isRequired,
+  submitted: PropTypes.func.isRequired,
 };
 
 export default Gender;

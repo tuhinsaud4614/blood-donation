@@ -11,7 +11,7 @@ const ImagePicker = ({ id, name, changed, required = false, value }) => {
       fileReader.onload = () => {
         const result = fileReader.result;
         if (result) {
-          changed(result);
+          changed(name, result.toString());
         }
       };
       fileReader.readAsDataURL(file);
@@ -21,10 +21,10 @@ const ImagePicker = ({ id, name, changed, required = false, value }) => {
     <div className={`${classes.Container}`}>
       {value ? (
         <>
-          <img src={value} alt="image" className={`${classes.View}`} />
+          <img src={value} alt="Profile" className={`${classes.View}`} />
           <FaTimes
             className={`${classes.ViewClose}`}
-            onClick={() => changed("")}
+            onClick={() => changed(name, "")}
           />
         </>
       ) : (

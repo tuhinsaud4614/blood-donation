@@ -28,6 +28,7 @@
 
 .ImagePicker {
   position: relative;
+  cursor: pointer;
 }
 
 .ImagePicker > input {
