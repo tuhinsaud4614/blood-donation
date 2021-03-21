@@ -32,7 +32,14 @@ const Input = ({
 
 Input.propTypes = {
   changed: PropTypes.func.isRequired,
-  type: PropTypes.oneOf(["number", "password", "text", "email", "search"]),
+  type: PropTypes.oneOf([
+    "number",
+    "password",
+    "text",
+    "email",
+    "search",
+    "url",
+  ]),
   value: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   name: PropTypes.string.isRequired,

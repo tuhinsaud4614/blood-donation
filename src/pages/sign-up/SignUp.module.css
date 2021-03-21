@@ -1,0 +1,92 @@
+.SignUpContainer {
+  height: inherit;
+  padding: calc(var(--pd) * 3) 0;
+}
+
+.Form {
+  padding: var(--pd);
+  max-width: 300px;
+}
+
+.Form > h1 {
+  font-size: 2.5rem;
+  margin-bottom: calc(var(--pd) * 2);
+  font-weight: bolder;
+  text-transform: capitalize;
+  width: fit-content;
+}
+
+.Logo {
+  font-size: 1.4rem;
+  margin: auto;
+}
+
+.LogoInfo {
+  font-size: 1.7rem;
+  color: var(--text-color);
+  text-align: center;
+  max-width: 220px;
+  margin: auto;
+}
+
+.Button {
+  padding: calc(var(--pd) * 2);
+  border-radius: calc(var(--border-radius) * 3.5);
+}
+
+.BloodGroup {
+  max-width: 250px;
+}
+
+.BloodGroupCol {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: calc(var(--pd) * 1.5) 0;
+}
+
+.Weight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: calc(var(--pd) * 3.5) 0;
+}
+
+.WeightForm {
+  max-width: 220px;
+}
+
+@media (max-width: 768px) {
+  .SignInContainer {
+    align-items: flex-start;
+    justify-content: stretch;
+  }
+
+  .Form {
+    max-width: 100%;
+  }
+
+  .Logo {
+    font-size: 1.3rem;
+    margin: auto;
+    margin-top: calc(var(--pd) * 2);
+  }
+
+  .LogoInfo {
+    display: none;
+  }
+
+  .BloodGroup {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .BloodGroup {
+    max-width: 100%;
+  }
+
+  .WeightForm {
+    max-width: 100%;
+  }
+}
