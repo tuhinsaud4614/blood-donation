@@ -25,7 +25,7 @@ const Button = ({
 };
 
 Button.propTypes = {
-  clicked: PropTypes.func.isRequired,
+  clicked: PropTypes.func,
   disabled: PropTypes.bool,
   type: PropTypes.oneOf(["button", "submit", "reset"]),
   children: PropTypes.string.isRequired,

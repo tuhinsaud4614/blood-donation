@@ -17,6 +17,6 @@
   font-weight: bold;
 }
 
-.Logo > p > span:last-child {
+.Logo > p > span:first-child {
   color: var(--primary-color);
 }

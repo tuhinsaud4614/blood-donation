@@ -1,0 +1,72 @@
+.SignInContainer {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+.Form {
+  padding: var(--pd);
+  max-width: 300px;
+}
+
+.Form > h1 {
+  font-size: 2rem;
+  margin-bottom: calc(var(--pd) * 2);
+  font-weight: bolder;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.Logo {
+  font-size: 1.6rem;
+}
+
+.Button {
+  padding: calc(var(--pd) * 2);
+  border-radius: calc(var(--border-radius) * 3.5);
+}
+
+.FormExtra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: calc(var(--pd) * 2);
+}
+
+.FormExtra > a {
+  display: inline-block;
+  color: var(--text-color);
+  font-size: 1.3rem;
+  text-decoration: underline;
+  margin-bottom: var(--pd);
+}
+
+.Alt {
+  font-size: 1.3rem;
+  color: var(--text-color);
+}
+
+.Alt > a {
+  color: var(--text-color);
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .SignInContainer {
+    align-items: flex-start;
+    justify-content: stretch;
+  }
+
+  .Form {
+    max-width: 100%;
+  }
+
+  .Logo {
+    font-size: 1.3rem;
+    margin: auto;
+    margin-top: calc(var(--pd) * 2);
+  }
+}
