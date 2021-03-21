@@ -22,7 +22,7 @@ Avatar.propTypes = {
   alt: PropTypes.string,
   height: PropTypes.number,
   width: PropTypes.number,
-  children: PropTypes.string,
+  children: PropTypes.any,
   customClass: PropTypes.string,
 };
 

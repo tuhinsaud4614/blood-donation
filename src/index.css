@@ -26,12 +26,13 @@ html {
 
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #eee;
+  background: black;
 }
 
 #root {
   background: #fff;
   border-radius: calc(var(--border-radius) * 2.5);
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
 }

@@ -2,10 +2,10 @@ import PropTypes from "prop-types";
 
 const Divider = ({ type = "vertical" }) => {
   const style = {
-    height: "100%",
+    height: "inherit",
     width: "1px",
     margin: "0 calc(var(--pd) * 2)",
-    background: "var(--text-color)",
+    background: "var(--secondary)",
     flexShrink: "0"
   };
   if (type === "horizontal") {

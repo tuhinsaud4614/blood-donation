@@ -164,17 +164,6 @@ const SignUp = () => {
 
   return (
     <div className={`container ${classes.SignUpContainer}`}>{element}</div>
-    // <div className={`container ${classes.SignUpContainer}`}>
-    //   {
-    //     <Age
-    //       index={7}
-    //       submitted={(i, data) => {
-    //         signUpDispatch({ type: AGE, payload: { ...data } });
-    //         setIndexState(i);
-    //       }}
-    //     />
-    //   }
-    // </div>
   );
 };
 

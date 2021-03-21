@@ -1,0 +1,71 @@
+.Notifications {
+  height: calc(100vh - (var(--pd) * 5));
+  width: 100%;
+  position: relative;
+}
+
+.Header {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  left: 0;
+  /* background: #fff; */
+  display: flex;
+  align-items: center;
+}
+
+.HeaderTitle {
+  display: flex;
+  align-items: center;
+}
+
+.HeaderTitle > span {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin-left: var(--pd);
+}
+
+.Body {
+  display: flex;
+  align-items: stretch;
+  padding-top: calc(var(--pd) * 6);
+}
+
+.BodyLeft,
+.BodyRight {
+  padding: var(--pd);
+  max-width: 300px !important;
+}
+
+.BodyLeft > h3,
+.BodyRight > h3 {
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin: var(--pd) 0;
+}
+
+.Avatar {
+  color: var(--primary-color);
+  font-weight: bolder;
+  font-size: 1.6rem;
+}
+
+.Avatar svg {
+  font-size: 2rem;
+}
+
+.BodyRight {
+    position: relative;
+}
+
+.BodyRight > h2 {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  margin: 0;
+  position: absolute;
+  top: calc(var(--pd) * -4);
+  left: 0;
+}

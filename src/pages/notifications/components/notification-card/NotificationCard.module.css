@@ -1,5 +1,5 @@
 .NotificationCard {
-  width: max-content;
+  width: 100%;
   padding: var(--pd);
   border-radius: var(--border-radius);
   background: #fff;
@@ -14,7 +14,8 @@
   overflow-wrap: break-word;
 }
 
-.Text > span {
+.Text > span,
+.Text b {
   font-size: 1.4rem;
   font-weight: bold;
   color: #000;

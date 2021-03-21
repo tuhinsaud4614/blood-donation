@@ -1,0 +1,12 @@
+.RouteContainer {
+  width: inherit;
+  height: inherit;
+  display: flex;
+}
+
+.Pages {
+  height: inherit;
+  flex-basis: 100%;
+  background: #eee;
+  padding: calc(var(--pd) * 2.5);
+}
