@@ -6,7 +6,17 @@ import Avatar from "../../../../shared/components/avatar/Avatar";
 const HistoryCard = ({ data, customClass }) => {
   return (
     <div className={`${classes.HistoryCard} bx-sh3`}>
-      <Avatar customClass={customClass}>{data.group}</Avatar>
+      <Avatar
+        height={30}
+        width={30}
+        customClass={`${customClass} ${
+          data.type.toLowerCase() === "scheduled"
+            ? classes.HistoryAvatar
+            : classes.HistoryAvatarUr
+        }`}
+      >
+        {data.group}
+      </Avatar>
       <h3 className={`m-0`}>{data.place}</h3>
       <p className={`text-muted m-0`}>{data.type}</p>
     </div>

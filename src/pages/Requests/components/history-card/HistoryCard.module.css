@@ -1,5 +1,5 @@
 .HistoryCard {
-  width: max-content;
+  width: 100%;
   padding: var(--pd);
   border-radius: var(--border-radius);
   display: flex;
@@ -8,7 +8,8 @@
 }
 
 .HistoryCard > h3 {
-  font-size: 1.7rem;
+  width: max-content;
+  font-size: 1.3rem;
   font-weight: bolder;
   padding-top: var(--pd);
   text-transform: capitalize;
@@ -18,4 +19,16 @@
   font-size: 1.1rem;
   padding-top: calc((var(--pd) * 0.5));
   text-transform: capitalize;
+}
+
+.HistoryAvatar {
+  background: var(--purple);
+  color: var(--secondary-color);
+  font-size: 1rem;
+}
+
+.HistoryAvatarUr {
+  font-size: 1rem;
+  background: var(--primary-color);
+  color: var(--secondary-color);
 }

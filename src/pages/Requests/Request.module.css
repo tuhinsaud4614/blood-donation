@@ -91,3 +91,17 @@
   padding: 0 var(--pd);
   width: 100%;
 }
+
+.BodyRightTop {
+  display: flex;
+  align-items: flex-start;
+}
+
+.BodyRightTop h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.BodyRightTopHistory {
+   /* width: min-content;  */
+}

@@ -13,6 +13,7 @@ import IconButton from "../../shared/components/button/IconButton";
 import UserInfo from "../../shared/components/navigation/user-info/UserInfo";
 import Badge from "../../shared/components/badge/Badge";
 import RequestForm from "./components/request-form/RequestForm";
+import HistoryCard from "./components/history-card/HistoryCard";
 import classes from "./Request.module.css";
 
 const requestBadgeData = [
@@ -77,6 +78,53 @@ const myRequest = [
     relation: "Brother",
     bloodGroup: "O+",
     badgeLabel: "edit",
+  },
+];
+
+const recentRequest = [
+  {
+    id: "1",
+    type: "Scheduled",
+    hospital: "Jerin Hospital",
+    distance: "3km",
+    time: "Sun 11:30 PM",
+    location: "21/3, Los Angeles, CA",
+    relation: "Brother",
+    bloodGroup: "O+",
+    badgeLabel: "contract",
+  },
+  {
+    id: "2",
+    type: "Scheduled",
+    hospital: "Jerin Hospital",
+    distance: "3km",
+    time: "Sun 11:30 PM",
+    location: "21/3, Los Angeles, CA",
+    relation: "Brother",
+    bloodGroup: "O+",
+    badgeLabel: "contract",
+  },
+  {
+    id: "3",
+    type: "Scheduled",
+    hospital: "Jerin Hospital",
+    distance: "3km",
+    time: "Sun 11:30 PM",
+    location: "21/3, Los Angeles, CA",
+    relation: "Brother",
+    bloodGroup: "O+",
+    badgeLabel: "contract",
+  },
+  {
+    id: "4",
+    type: "Scheduled",
+    hospital: "Jerin Hospital",
+    distance: "3km",
+    time: "Sun 11:30 PM",
+    location: "21/3, Los Angeles, CA",
+    relation: "Brother",
+    bloodGroup: "O+",
+    badgeLabel: "contract",
   },
 ];
 
@@ -160,7 +208,55 @@ const Request = () => {
         {/* Body Right Start */}
         <section className={`${classes.BodyRight}`}>
           <h3>Blood Request</h3>
-          <RequestForm />
+          {/* Body Right Top Start  */}
+          <section className={`${classes.BodyRightTop}`}>
+            <RequestForm />
+            <div className={`pl-3 ${classes.BodyRightTopHistory}`}>
+              <h3>Recent History</h3>
+              <div className={`row m-0`}>
+                <div className={`p-0 col-6 pr-2 pb-3`}>
+                  <HistoryCard
+                    data={{
+                      group: "O+",
+                      place: "Los Angeles",
+                      type: "urgent",
+                    }}
+                  />
+                </div>
+                <div className={`p-0 col-6 pb-3`}>
+                  <HistoryCard
+                    data={{
+                      group: "A+",
+                      place: "Lorem Ipsum",
+                      type: "scheduled",
+                    }}
+                  />
+                </div>
+                <div className={`p-0 col-6 pb-3 pr-2`}>
+                  <HistoryCard
+                    data={{
+                      group: "O+",
+                      place: "Los Angeles",
+                      type: "urgent",
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+          {/* Body Right Top End  */}
+          {/* Body Right Bottom Start  */}
+          <h3>Recent Requests</h3>
+          <div className="row m-0">
+            {recentRequest.map((item) => {
+              return (
+                <div key={item.id} className="col-6 pb-3">
+                  <RequestCard data={item} />
+                </div>
+              );
+            })}
+          </div>
+          {/* Body Right Bottom End  */}
         </section>
         {/* Body Right end */}
       </div>

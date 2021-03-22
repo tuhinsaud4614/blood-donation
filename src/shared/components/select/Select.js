@@ -15,6 +15,7 @@ const Select = (props) => {
   return (
     <div className={`${classes.SelectContainer}`}>
       <select
+      defaultValue={selectedValue}
         id={id}
         name={name}
         className={`form-control text-secondary ${classes.Select} shadow`}
@@ -22,7 +23,6 @@ const Select = (props) => {
       >
         {data.map((item, index) => (
           <option
-            selected={selectedValue === item.value}
             value={item.value}
             key={index}
           >

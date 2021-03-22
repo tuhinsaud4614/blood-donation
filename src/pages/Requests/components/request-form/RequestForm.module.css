@@ -2,4 +2,19 @@
   padding: var(--pd);
   background: #fff;
   border-radius: var(--border-radius);
+  flex-basis: 100%;
+}
+
+.Type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: calc(var(--pd) * 2);
+}
+
+.Scheduled {
+  display: inline-block;
+  text-decoration: underline;
+  color: var(--primary-color);
+  font-size: 1.3rem;
 }

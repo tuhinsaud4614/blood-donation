@@ -1,6 +1,9 @@
+import { removeMultiSpace, REQUIRED, validate } from "../../../../shared/utils";
+
 import Button from "../../../../shared/components/button/Button";
 import Select from "../../../../shared/components/select/Select";
 import Input from "../../../../shared/components/input/Input";
+import CheckButton from "../../../../shared/components/check-button/CheckButton";
 import useForm from "../../../../shared/hooks/form-hook";
 
 import classes from "./RequestForm.module.css";
@@ -34,15 +37,22 @@ const RequestForm = () => {
   };
 
   const changeHandler = (e) => {
-      console.log(e.target.name);
-    // const id = e.target.name;
-    // const value = removeMultiSpace(e.target.value);
-    // if (id.toString() === "email") {
-    //   changeFunc(id, value, validate(value, [REQUIRED, IS_EMAIL]));
-    // } else {
-    //   changeFunc(id, value, validate(value, [{ type: REQUIRED }]));
-    // }
+    // console.log(e.target.name);
+    const id = e.target.name;
+    const value = removeMultiSpace(e.target.value);
+    if (id.toString() === "area") {
+      changeFunc(id, value, validate(value, [REQUIRED]));
+    } else if (id.toString() === "bloodGroup" || id.toString() === "relation") {
+      changeFunc(id, value, true);
+    } else if (id.toString() === "type") {
+      if (e.target.checked) {
+        changeFunc(id, "urgent", true);
+      } else {
+        changeFunc(id, "scheduled", true);
+      }
+    }
   };
+  console.log(formState);
   return (
     <div className={`${classes.Form} bx-sh1`}>
       <form onSubmit={submitHandler}>
@@ -59,10 +69,10 @@ const RequestForm = () => {
           />
         </div>
         <div className={`row m-0`}>
-          <div className={`form-group pb-3 col-6 pr-4`}>
+          <div className={`form-group p-0 pb-3 col-6 pr-4`}>
             <label htmlFor="bloodGroup">Blood Group</label>
             <Select
-              name="age"
+              name="bloodGroup"
               changed={changeHandler}
               selectedValue={"o+"}
               data={[
@@ -94,6 +104,12 @@ const RequestForm = () => {
               ]}
             />
           </div>
+        </div>
+        <div className={`${classes.Type}`}>
+          <CheckButton name="type" changed={changeHandler}>
+            Urgent
+          </CheckButton>
+          <span className={`${classes.Scheduled}`}>Scheduled</span>
         </div>
         <Button
           type="submit"
