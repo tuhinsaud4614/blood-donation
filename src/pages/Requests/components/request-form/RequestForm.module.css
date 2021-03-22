@@ -1,5 +1,5 @@
 .Form {
-  padding: var(--pd);
+  padding: var(--pd) calc(var(--pd) * 2.5);
   background: #fff;
   border-radius: var(--border-radius);
   flex-basis: 100%;
@@ -17,4 +17,16 @@
   text-decoration: underline;
   color: var(--primary-color);
   font-size: 1.3rem;
+}
+
+.Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: var(--pd);
+}
+
+.Button > button {
+  font-size: 1.4rem;
+  padding: var(--pd) calc(var(--pd) * 2.5);
 }

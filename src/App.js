@@ -9,6 +9,7 @@ import Notifications from "./pages/notifications/Notifications";
 import Sidebar from "./shared/components/navigation/sidebar/Sidebar";
 import Profile from "./pages/profile/Profile";
 import Request from "./pages/Requests/Request";
+import Donations from "./pages/donations/Donations";
 
 const RouteContainer = ({ children }) => {
   return (
@@ -46,6 +47,11 @@ function App() {
       <Route path={routes.request} exact>
         <RouteContainer>
           <Request />
+        </RouteContainer>
+      </Route>
+      <Route path={routes.donations} exact>
+        <RouteContainer>
+          <Donations />
         </RouteContainer>
       </Route>
     </Switch>

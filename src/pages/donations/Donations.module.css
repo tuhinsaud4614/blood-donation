@@ -1,0 +1,77 @@
+.Donations {
+  height: calc(100vh - (var(--pd) * 5));
+  width: 100%;
+  position: relative;
+}
+
+.Header {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  left: 0;
+  /* background: #fff; */
+  display: flex;
+  align-items: center;
+}
+
+.HeaderTitle {
+  display: flex;
+  align-items: center;
+}
+
+.HeaderTitle > span {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin-left: var(--pd);
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.UserInfoButton {
+  margin-left: var(--pd);
+  font-size: 2.5rem;
+  padding: calc(var(--pd) * 0.1) !important;
+}
+
+.Body {
+  padding-top: calc(var(--pd) * 6);
+}
+
+.BodyTop {
+  display: flex;
+  align-items: center;
+  margin: calc(var(--pd) * 1.5) 0;
+}
+
+.HospitalCard:not(:last-child) {
+  margin-right: calc(var(--pd) * 2.5);
+}
+
+.BodyBottom {
+  display: flex;
+  align-items: stretch;
+}
+.BodyBottomLeft > h3,
+.BodyBottomRight > h3 {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  margin-bottom: calc(var(--pd) * 1.5);
+}
+
+.BodyBottomLeft {
+  flex-basis: 45%;
+}
+
+.BodyBottomRight {
+  flex-basis: 55%;
+}
+
+.BodyBottomRight {
+  padding-left: calc(var(--pd) * 2);
+}

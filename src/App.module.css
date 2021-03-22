@@ -18,6 +18,6 @@
 .Pages {
   height: inherit;
   flex-basis: 100%;
-  background: #f3f3f3;
+  background: #faf6f6;
   padding: calc(var(--pd) * 2.5);
 }

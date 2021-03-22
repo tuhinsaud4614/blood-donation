@@ -14,7 +14,7 @@
 }
 
 .Content {
-  padding: var(--pd);
+  padding: var(--pd) calc(var(--pd) * 2);
   padding-top: calc(var(--pd) * 3);
   display: flex;
   align-items: center;

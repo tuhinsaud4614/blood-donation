@@ -111,14 +111,11 @@ const RequestForm = () => {
           </CheckButton>
           <span className={`${classes.Scheduled}`}>Scheduled</span>
         </div>
-        <Button
-          type="submit"
-          disabled={!formState.formIsValid}
-          blocked
-          className={`${classes.Button}`}
-        >
-          Publish
-        </Button>
+        <div className={`${classes.Button}`}>
+          <Button type="submit" disabled={!formState.formIsValid}>
+            Publish
+          </Button>
+        </div>
       </form>
     </div>
   );

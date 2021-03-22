@@ -1,13 +1,13 @@
 .DonationHistory {
   border-radius: var(--border-radius);
-  padding: var(--pd);
-  width: max-content;
+  padding: calc(var(--pd) * 3.5) calc(var(--pd) * 2);
+  width: 100%;
 }
 
 .Head {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bolder;
-  /* margin: 0; */
+  margin-bottom: calc(var(--pd) * 2);
 }
 
 .Body {

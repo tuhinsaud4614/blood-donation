@@ -8,9 +8,9 @@ import Avatar from "../../../../shared/components/avatar/Avatar";
 import IconButton from "../../../../shared/components/button/IconButton";
 import classes from "./HospitalCard.module.css";
 
-const HospitalCard = ({ name, date, address, clicked }) => {
+const HospitalCard = ({ className, name, date, address, clicked }) => {
   return (
-    <div className={`${classes.HospitalCard} bx-sh2`}>
+    <div className={`${classes.HospitalCard} ${className || ""} bx-sh2`}>
       <IconButton clicked={() => {}} className={`${classes.Action}`}>
         <FiMoreVertical />
       </IconButton>
@@ -40,6 +40,7 @@ HospitalCard.protoTypes = {
   name: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   address: PropTypes.string.isRequired,
+  className: PropTypes.string,
   clicked: PropTypes.func.isRequired,
 };
 

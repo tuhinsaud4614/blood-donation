@@ -9,12 +9,12 @@ const DonationHistory = ({ data, units }) => {
   return (
     <div className={`${classes.DonationHistory} bx-sh2`}>
       <h2 className={`${classes.Head}`}>
-        You Have saved 5 lives, donated {units} unit
+        You have saved 5 lives, donated {units} unit
       </h2>
       <div className={`${classes.Body}`}>
         {data.map((item, index) => (
           <Fragment key={item.id}>
-            {index > 0 && <Divider type="horizontal" />}
+            {index > 0 && <Divider space={24} type="horizontal" />}
             <DonationHistoryItem
               index={index + 1}
               count={item.count}

@@ -5,6 +5,7 @@ const routes = {
   notifications: "/notifications",
   home: "/home",
   profile: "/profile",
+  donations: "/profile/donations",
   request: "/home/request",
 };
 
