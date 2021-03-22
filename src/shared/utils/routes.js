@@ -4,6 +4,7 @@ const routes = {
   signIn: "/sign-in",
   notifications: "/notifications",
   home: "/home",
+  profile: "/profile",
 };
 
 export default routes;

@@ -1,6 +1,7 @@
 import { FiHome, FiBell, FiMap, FiSettings } from "react-icons/fi";
 import { FaUserAlt } from "react-icons/fa";
 
+import routes from "../../../utils/routes";
 import classes from "./Navbar.module.css";
 import NavbarItem from "./NavbarItem";
 
@@ -8,13 +9,13 @@ const Navbar = () => {
   return (
     <nav className={`${classes.Nav}`}>
       <ul className={`${classes.NavItems}`}>
-        <NavbarItem link="/home" icon={<FiHome />}>
+        <NavbarItem link={routes.home} icon={<FiHome />}>
           Home
         </NavbarItem>
-        <NavbarItem link="/profile" icon={<FaUserAlt />}>
+        <NavbarItem link={routes.profile} icon={<FaUserAlt />}>
           Profile
         </NavbarItem>
-        <NavbarItem link="/notifications" icon={<FiBell />}>
+        <NavbarItem link={routes.notifications} icon={<FiBell />}>
           Notifications
         </NavbarItem>
         <NavbarItem link="/donors" icon={<FiMap />}>

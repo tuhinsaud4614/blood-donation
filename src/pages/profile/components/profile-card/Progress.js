@@ -12,7 +12,7 @@ const Progress = ({ passedDays }) => {
           className={`${classes.ProgressBar} progress-bar`}
           role="progressbar"
           style={{ width: `${percentage}%` }}
-          aria-valuenow={`${percentage}`}
+          aria-valuenow={percentage}
           aria-valuemin="0"
           aria-valuemax="100"
         ></div>

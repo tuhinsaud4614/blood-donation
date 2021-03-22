@@ -1,7 +1,18 @@
+.ContainerFluid {
+  width: 100%;
+  max-width: 1125px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .RouteContainer {
   width: inherit;
   height: inherit;
   display: flex;
+  border-radius: calc(var(--border-radius) * 2.5);
+  overflow: hidden !important;
 }
 
 .Pages {

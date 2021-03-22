@@ -21,3 +21,26 @@
   color: var(--primary-color);
   font-weight: bolder;
 }
+
+.Badges {
+  width: 100%;
+  padding: var(--pd) calc(var(--pd) * 2);
+  border-radius: var(--border-radius);
+}
+
+.Badges > h3 {
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin-bottom: calc(var(--pd) * 2);
+}
+
+.BadgeItem {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.BadgeItem > div {
+  margin-right: calc(var(--pd) * 4);
+  margin-bottom: calc(var(--pd) * 4);
+}

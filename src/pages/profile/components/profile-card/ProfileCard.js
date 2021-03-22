@@ -1,18 +1,17 @@
+import { FiShare2 } from "react-icons/fi";
+
 import PropTypes from "prop-types";
 
 import dropImg from "../../../../assets/img/blood-drop-1.svg";
 import liveSaver from "../../../../assets/img/live-saver.png";
-import tree from "../../../../assets/img/tree.png";
-import certified from "../../../../assets/img/certified.png";
-import superman from "../../../../assets/img/superman.png";
 import lives from "../../../../assets/img/lives.png";
-import fast from "../../../../assets/img/fast.png";
-import clean from "../../../../assets/img/clean.png";
+import protector from "../../../../assets/img/protector.png";
 import ProfileBadge from "../profile-badge/ProfileBadge";
 
 import classes from "./ProfileCard.module.css";
 import Divider from "../../../../shared/components/Divider";
 import Progress from "./Progress";
+import IconButton from "../../../../shared/components/button/IconButton";
 
 const ProfileCard = ({ user }) => {
   return (
@@ -38,22 +37,22 @@ const ProfileCard = ({ user }) => {
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            ever since the 1500s. Lorem ipsum dolor sit amet.
           </p>
         </div>
         {/* Body Top End */}
         {/* Body mid Start */}
         <div className={`${classes.BodyMid}`}>
-          <h3>Badges</h3>
+          <h3>
+            Badges{" "}
+            <IconButton className={`p-0`} clicked={() => {}}>
+              <FiShare2 />
+            </IconButton>
+          </h3>
           <div className={`${classes.BodyMidBadges}`}>
             <ProfileBadge title="Life Saver" img={liveSaver} />
-            <ProfileBadge title="Life Saver" img={tree} />
-            <ProfileBadge title="Certified" img={certified} />
-            <ProfileBadge title="Superman" img={superman} />
             <ProfileBadge title="50 Lives" img={lives} />
-            <ProfileBadge title="Fast" img={fast} />
-            <ProfileBadge title="clean" img={clean} />
+            <ProfileBadge title="Protector" img={protector} />
           </div>
         </div>
         {/* Body mid End */}

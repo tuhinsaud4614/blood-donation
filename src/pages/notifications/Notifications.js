@@ -1,5 +1,5 @@
 import { FaBullhorn, FaArrowLeft, FaHistory } from "react-icons/fa";
-import { FiAward } from "react-icons/fi";
+import { FiAward, FiMoreVertical } from "react-icons/fi";
 
 import userImg from "../../assets/img/user1.jpg";
 import Avatar from "../../shared/components/avatar/Avatar";
@@ -19,7 +19,7 @@ const Notifications = () => {
           </IconButton>
           <span>Notifications</span>
         </div>
-        <div className={`ml-auto`}>
+        <div className={`${classes.userInfo}`}>
           <UserInfo
             data={{
               avatar: userImg,
@@ -27,6 +27,12 @@ const Notifications = () => {
               status: "Top Rated Donor",
             }}
           />
+          <IconButton
+            className={`${classes.UserInfoButton}`}
+            clicked={() => {}}
+          >
+            <FiMoreVertical />
+          </IconButton>
         </div>
       </header>
       <div className={`${classes.Body}`}>
@@ -98,7 +104,6 @@ const Notifications = () => {
             className={`mb-4`}
             data={{
               sender: "You",
-              msg: "earned a new Badge",
             }}
             avatar={
               <Avatar customClass={`${classes.Avatar} bx-sh3`}>

@@ -1,6 +1,6 @@
 .NotificationCard {
   width: 100%;
-  padding: var(--pd);
+  padding: calc(var(--pd) * 1.2);
   border-radius: var(--border-radius);
   background: #fff;
   display: flex;

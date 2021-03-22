@@ -7,12 +7,15 @@ import SignIn from "./pages/sign-in/SignIn";
 import SignUp from "./pages/sign-up/SignUp";
 import Notifications from "./pages/notifications/Notifications";
 import Sidebar from "./shared/components/navigation/sidebar/Sidebar";
+import Profile from "./pages/profile/Profile";
 
 const RouteContainer = ({ children }) => {
   return (
-    <div className={`${classes.RouteContainer}`}>
-      <Sidebar />
-      <main className={`${classes.Pages}`}>{children}</main>
+    <div className={`${classes.ContainerFluid}`}>
+      <div className={`${classes.RouteContainer}`}>
+        <Sidebar />
+        <main className={`${classes.Pages}`}>{children}</main>
+      </div>
     </div>
   );
 };
@@ -32,6 +35,11 @@ function App() {
       <Route path={routes.notifications} exact>
         <RouteContainer>
           <Notifications />
+        </RouteContainer>
+      </Route>
+      <Route path={routes.profile} exact>
+        <RouteContainer>
+          <Profile />
         </RouteContainer>
       </Route>
     </Switch>

@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 
 import classes from "./ProfileHistory.module.css";
@@ -13,7 +12,13 @@ const ProfileHistory = () => {
       date: { day: 7, month: "Dec" },
     },
     {
-      id: "1",
+      id: "2",
+      hospital: "Saint Sebatine Hospital",
+      bag: 1,
+      date: { day: 7, month: "Dec" },
+    },
+    {
+      id: "3",
       hospital: "Saint Sebatine Hospital",
       bag: 1,
       date: { day: 7, month: "Dec" },
@@ -47,5 +52,4 @@ const ProfileHistory = () => {
     </section>
   );
 };
-ProfileHistory.propTypes = {};
 export default ProfileHistory;
