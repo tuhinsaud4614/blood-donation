@@ -7,11 +7,20 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  background: #fff;
+}
+
+.ListTile:not(:last-child) {
+  margin-right: var(--pd);
 }
 
 .Expanded {
   padding: 0;
   display: block;
+  /* position: absolute; */
+  /* bottom: 0;
+  left: 0;
+  z-index: 300; */
 }
 
 .FloatIcon {
@@ -46,7 +55,7 @@
 }
 
 .Body > h3 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -163,24 +172,24 @@
 
 .ReviewerBodyLeftHeadRight > h4 {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: bolder;
 }
 
 .ReviewerBodyLeftHeadRight > span {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .ReviewerBodyLeftBody {
   margin: 0;
   padding: 0 var(--pd);
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   max-width: 230px;
   text-align: justify;
 }
 
 .ReviewerBodyButton {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   border-radius: var(--border-radius);
 }
 
@@ -198,7 +207,7 @@
 }
 
 .HospitalLeft > h2 {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: calc(var(--pd) * 2);
 }
@@ -210,6 +219,6 @@
 
 .HospitalLeft > h4 {
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin: 0;
 }

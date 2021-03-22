@@ -4,6 +4,7 @@
   width: min-content;
   display: flex;
   align-items: center;
+  background: var(--secondary-color);
 }
 
 .Divider {
@@ -28,7 +29,7 @@
   font-size: 1.4rem;
   color: var(--text-color);
   transition: all 0.3s linear;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .ButtonLabel:hover,

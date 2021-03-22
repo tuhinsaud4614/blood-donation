@@ -1,0 +1,18 @@
+.RequestBadges {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: calc(var(--pd) * 2.5);
+}
+
+.RequestBadge:hover {
+  text-decoration: none;
+}
+
+.RequestBadge:not(:last-child) {
+  margin-right: calc(var(--pd) * 2.5);
+}
+
+.Badge {
+  width: min-content;
+}

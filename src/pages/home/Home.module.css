@@ -1,0 +1,99 @@
+.Home {
+  height: calc(100vh - (var(--pd) * 5));
+  width: 100%;
+  position: relative;
+}
+
+.Header {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  left: 0;
+  /* background: #fff; */
+  display: flex;
+  align-items: center;
+}
+
+.HeaderTitle {
+  display: flex;
+  align-items: center;
+}
+
+.HeaderTitle > span {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  margin-right: calc(var(--pd) * 2);
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.UserInfoButton {
+  margin-left: var(--pd);
+  font-size: 2.5rem;
+  padding: calc(var(--pd) * 0.1) !important;
+}
+
+.Body {
+  padding-top: calc(var(--pd) * 6);
+  width: inherit;
+}
+
+.BodyTop {
+  max-width: 922px;
+}
+
+.HospitalCard:not(:last-child) {
+  margin-right: calc(var(--pd) * 2.5);
+}
+
+.BodyBottom {
+  display: flex;
+  align-items: stretch;
+}
+.BodyBottomLeft > h3,
+.BodyBottomRight > h3 {
+  font-size: 1.4rem;
+  font-weight: bolder;
+  color: var(--text-color);
+  margin: calc(var(--pd) * 1.5) 0;
+}
+
+.BodyBottomLeft {
+  min-width: 240px;
+}
+
+.BodyBottomRight {
+  /* min-width: calc(100% - 240px); */
+  flex-grow: 1;
+  padding-left: calc(var(--pd) * 2);
+}
+
+/* --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px; */
+
+/* @media (max-width: 1200px) {
+  .BodyTop {
+    max-width: 922px;
+  }
+}
+
+@media (max-width: 992px) {
+  .BodyTop {
+    max-width: 714px;
+  }
+}
+
+@media (max-width: 768px) {
+  .BodyTop {
+    max-width: 490px;
+  }
+} */

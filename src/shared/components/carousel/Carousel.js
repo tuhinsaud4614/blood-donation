@@ -9,7 +9,7 @@ import classes from "./Carousel.module.css";
 import CarouselItem from "./CarouselItem";
 import CarouselButton from "./CarouselButton";
 
-const Carousel = ({ data }) => {
+const Carousel = ({ data, className }) => {
   const ref = useRef(null);
   const settings = {
     dots: false,
@@ -17,6 +17,30 @@ const Carousel = ({ data }) => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   const prev = () => {
@@ -29,17 +53,17 @@ const Carousel = ({ data }) => {
 
   return (
     // <div className="container">
-      <Slider
-        ref={ref}
-        {...settings}
-        className={`${classes.Carousel}`}
-        prevArrow={<CarouselButton direction="left" clicked={prev} />}
-        nextArrow={<CarouselButton direction="right" clicked={next} />}
-      >
-        {data.map((item) => (
-          <CarouselItem key={item.id} content={item} />
-        ))}
-      </Slider>
+    <Slider
+      ref={ref}
+      {...settings}
+      className={`${classes.Carousel} ${className || ""}`}
+      prevArrow={<CarouselButton direction="left" clicked={prev} />}
+      nextArrow={<CarouselButton direction="right" clicked={next} />}
+    >
+      {data.map((item) => (
+        <CarouselItem key={item.id} content={item} />
+      ))}
+    </Slider>
     // </div>
   );
 };
@@ -56,6 +80,7 @@ Carousel.propTypes = {
       path: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,
+  className: PropTypes.string,
 };
 
 export default Carousel;

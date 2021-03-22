@@ -9,7 +9,7 @@
 }
 
 .Label {
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: #000;
   font-weight: 500;
   text-align: center;
@@ -24,7 +24,7 @@
 }
 
 .Content > span {
-  font-size: 1.2rem;
+  font-size: .9rem;
   color: var(--text-color);
   text-transform: uppercase;
 }
@@ -32,7 +32,7 @@
 .Ranger {
   -webkit-appearance: slider-vertical;
   outline: none;
-  height: 180px;
+  height: 120px;
   width: 10px;
   border-radius: var(--border-radius);
 }

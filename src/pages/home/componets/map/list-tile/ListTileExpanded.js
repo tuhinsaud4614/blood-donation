@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
-import Avatar from "../../avatar/Avatar";
-import Button from "../../button/Button";
+import Avatar from "../../../../../shared/components/avatar/Avatar";
+import Button from "../../../../../shared/components/button/Button";
 import classes from "./ListTile.module.css";
 
 const ListTileExpandedTop = ({ title, address, mobile, rating, status }) => {

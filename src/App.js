@@ -10,6 +10,7 @@ import Sidebar from "./shared/components/navigation/sidebar/Sidebar";
 import Profile from "./pages/profile/Profile";
 import Request from "./pages/Requests/Request";
 import Donations from "./pages/donations/Donations";
+import Home from "./pages/home/Home";
 
 const RouteContainer = ({ children }) => {
   return (
@@ -52,6 +53,11 @@ function App() {
       <Route path={routes.donations} exact>
         <RouteContainer>
           <Donations />
+        </RouteContainer>
+      </Route>
+      <Route path={routes.home} exact>
+        <RouteContainer>
+          <Home />
         </RouteContainer>
       </Route>
     </Switch>

@@ -1,0 +1,18 @@
+.Menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: calc(var(--pd) * 2.5);
+}
+
+.MenuItem:hover {
+  text-decoration: none;
+}
+
+.MenuItem:not(:last-child) {
+  margin-right: calc(var(--pd) * 2.5);
+}
+
+.Badge {
+    width: fit-content;
+}

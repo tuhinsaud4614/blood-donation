@@ -7,7 +7,7 @@
   display: flex;
   margin: 0 var(--pd);
   border-radius: calc(var(--border-radius) * 2);
-  height: 150px;
+  height: 130px;
   position: relative;
   overflow: hidden;
   text-decoration: none;
@@ -28,7 +28,7 @@
   top: 0;
   background: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 0.4) 47%,
+    rgba(0, 0, 0, 0.7) 47%,
     rgba(0, 0, 0, 0) 100%
   );
   display: flex;

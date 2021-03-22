@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-import bloodImg from "../../../../assets/img/blood-drop.svg";
-import Avatar from "../../avatar/Avatar";
-import Divider from "../../Divider";
+import bloodImg from "../../../../../assets/img/blood-drop.svg";
+import Avatar from "../../../../../shared/components/avatar/Avatar";
+import Divider from "../../../../../shared/components/Divider";
 import ListTileExpandedTop, {
   ListTileExpandedBottomHospital,
   ListTileExpandedBottomReviewer,
