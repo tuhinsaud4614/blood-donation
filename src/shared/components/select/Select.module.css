@@ -25,3 +25,8 @@
   color: var(--primary-color);
   font-size: 1.6rem;
 }
+
+.Icon > svg {
+  font-size: inherit;
+  color: inherit;
+}

@@ -1,10 +1,16 @@
 .RequestCard {
   padding: var(--pd);
   border-radius: var(--border-radius);
+  width: 100%;
+}
+.RequestCard:not(:last-child) {
+  margin-bottom: var(--pd);
 }
 .RequestCardTop {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .RequestCardTopLeft {
@@ -17,7 +23,7 @@
 .RequestCardTopLeft > h3 {
   margin: 0;
   font-weight: bolder;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
 }
 
 .RequestCardTopLeft > span {
@@ -35,10 +41,11 @@
 }
 
 .RequestCardTopRight > div > span {
-  padding: var(--pd);
+  padding: calc(var(--pd) * .7);
   margin-right: var(--pd);
   border-radius: calc(var(--border-radius) * 2);
-  font-size: 1.1rem;
+  font-size: 1rem;
+  text-transform: capitalize;
 }
 
 .RequestCardTopRight > div > svg {
@@ -51,6 +58,7 @@
   padding-top: calc(var(--pd) * 0.5);
   text-transform: uppercase;
   font-weight: bolder;
+  font-size: 1.4rem;
 }
 
 .RequestCardMid {
@@ -58,11 +66,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .RequestCardMid > h4 {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: bolder;
 }
 
@@ -79,8 +88,8 @@
 }
 
 .RequestCardBottom > span {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .RequestCardBottom > span > svg {

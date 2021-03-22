@@ -5,6 +5,7 @@ const routes = {
   notifications: "/notifications",
   home: "/home",
   profile: "/profile",
+  request: "/home/request",
 };
 
 export default routes;

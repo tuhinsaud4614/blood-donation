@@ -8,6 +8,7 @@ import SignUp from "./pages/sign-up/SignUp";
 import Notifications from "./pages/notifications/Notifications";
 import Sidebar from "./shared/components/navigation/sidebar/Sidebar";
 import Profile from "./pages/profile/Profile";
+import Request from "./pages/Requests/Request";
 
 const RouteContainer = ({ children }) => {
   return (
@@ -40,6 +41,11 @@ function App() {
       <Route path={routes.profile} exact>
         <RouteContainer>
           <Profile />
+        </RouteContainer>
+      </Route>
+      <Route path={routes.request} exact>
+        <RouteContainer>
+          <Request />
         </RouteContainer>
       </Route>
     </Switch>

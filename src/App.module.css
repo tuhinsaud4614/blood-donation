@@ -1,6 +1,6 @@
 .ContainerFluid {
   width: 100%;
-  max-width: 1125px;
+  max-width: 1200px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -18,6 +18,6 @@
 .Pages {
   height: inherit;
   flex-basis: 100%;
-  background: #eee;
+  background: #f3f3f3;
   padding: calc(var(--pd) * 2.5);
 }

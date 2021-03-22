@@ -1,0 +1,93 @@
+.Request {
+  height: calc(100vh - (var(--pd) * 5));
+  width: 100%;
+  position: relative;
+}
+
+.Header {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  left: 0;
+  /* background: #fff; */
+  display: flex;
+  align-items: center;
+}
+
+.HeaderTitle {
+  display: flex;
+  align-items: center;
+}
+
+.HeaderTitle > span {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin-left: var(--pd);
+}
+
+.UserInfo {
+  display: flex;
+  align-items: center;
+}
+
+.UserInfoButton {
+  margin-left: var(--pd);
+  font-size: 2.5rem;
+  padding: calc(var(--pd) * 0.1) !important;
+}
+
+.Body {
+  display: flex;
+  padding-top: calc(var(--pd) * 6.2);
+}
+
+.BodyLeft {
+  padding: var(--pd);
+  width: 280px;
+}
+.BodyRight {
+  padding: var(--pd);
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.BodyLeft > h3,
+.BodyRight > h3 {
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin: var(--pd) 0;
+}
+
+.BodyRight > h2 {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  margin: 0;
+  position: absolute;
+  top: calc(var(--pd) * -4);
+  left: 0;
+}
+
+.RequestBadges {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: calc(var(--pd) * 2);
+}
+
+.RequestBadge:hover {
+  text-decoration: none;
+}
+
+.RequestBadge:not(:last-child) {
+  margin-right: calc(var(--pd) * 2);
+}
+
+.RequestCard {
+  padding: 0 var(--pd);
+  width: 100%;
+}

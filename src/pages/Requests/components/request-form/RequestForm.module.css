@@ -1,0 +1,5 @@
+.Form {
+  padding: var(--pd);
+  background: #fff;
+  border-radius: var(--border-radius);
+}
