@@ -10,6 +10,8 @@ import HospitalCard from "./components/hospital-card/HospitalCard";
 import DonationHistory from "./components/donation-history/DonationHistory";
 import ReviewCard from "./components/review-card/ReviewCard";
 import classes from "./Donations.module.css";
+import { useDispatch } from "react-redux";
+import { signOut } from "../../store/auth/actions";
 
 const hospitalData = [
   {
@@ -47,6 +49,7 @@ const reviews = [
 
 const Donations = () => {
   const { goBack } = useHistory();
+  const rdxDispatch = useDispatch();
   return (
     <div className={`${classes.Donations}`}>
       <header className={`${classes.Header}`}>
@@ -66,7 +69,7 @@ const Donations = () => {
           />
           <IconButton
             className={`${classes.UserInfoButton}`}
-            clicked={() => {}}
+            clicked={() => rdxDispatch(signOut())}
           >
             <FiMoreVertical />
           </IconButton>

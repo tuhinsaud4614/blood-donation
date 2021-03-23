@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { useSelector } from "react-redux";
 
 import { REQUIRED, validate } from "../../../shared/utils";
 import useForm from "../../../shared/hooks/form-hook";
@@ -8,6 +9,7 @@ import ImagePicker from "../../../shared/components/image-picker/ImagePicker";
 import classes from "../SignUp.module.css";
 
 const ProfileImage = ({ index, submitted }) => {
+  const { loading } = useSelector((state) => state.auth);
   const [formState, changeFunc] = useForm({
     form: {
       avatar: {
@@ -46,7 +48,7 @@ const ProfileImage = ({ index, submitted }) => {
         </div>
         <Button
           type="button"
-          disabled={!formState.formIsValid}
+          disabled={!formState.formIsValid || loading}
           blocked
           clicked={submitHandler}
           className={`${classes.Button} mt-4`}

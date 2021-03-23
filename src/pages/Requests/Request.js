@@ -15,6 +15,8 @@ import Badge from "../../shared/components/badge/Badge";
 import RequestForm from "./components/request-form/RequestForm";
 import HistoryCard from "./components/history-card/HistoryCard";
 import classes from "./Request.module.css";
+import { useDispatch } from "react-redux";
+import { signOut } from "../../store/auth/actions";
 
 const requestBadgeData = [
   {
@@ -130,6 +132,7 @@ const recentRequest = [
 
 const Request = () => {
   const { goBack } = useHistory();
+  const rdxDispatch = useDispatch();
   return (
     <div className={`${classes.Request}`}>
       <header className={`${classes.Header}`}>
@@ -149,7 +152,7 @@ const Request = () => {
           />
           <IconButton
             className={`${classes.UserInfoButton}`}
-            clicked={() => {}}
+            clicked={() => rdxDispatch(signOut())}
           >
             <FiMoreVertical />
           </IconButton>

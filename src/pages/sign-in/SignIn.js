@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
+import { useHistory } from "react-router";
+import { useDispatch, useSelector } from "react-redux";
 
 import {
   IS_EMAIL,
@@ -12,9 +14,16 @@ import routes from "../../shared/utils/routes";
 import Logo from "../../shared/components/logo/Logo";
 import Button from "../../shared/components/button/Button";
 import Input from "../../shared/components/input/Input";
+import Modal from "../../shared/components/modal/Modal";
 import classes from "./SignIn.module.css";
+import { signIn } from "../../store/auth/actions";
 
 const SignIn = () => {
+  const history = useHistory();
+  const rdxDispatch = useDispatch();
+  const { loading, errors } = useSelector(
+    (state) => state.auth
+  );
   const [formState, changeFunc] = useForm({
     form: {
       email: {
@@ -31,7 +40,9 @@ const SignIn = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log("submitted");
+    rdxDispatch(
+      signIn(formState.form["email"].value, formState.form["password"].value, history.push),
+    );
   };
 
   const changeHandler = (e) => {
@@ -44,9 +55,14 @@ const SignIn = () => {
       changeFunc(id, value, validate(value, [{ type: REQUIRED }]));
     }
   };
-  console.log(formState);
+  // console.log(formState);
   return (
     <div className={`${classes.SignInContainer}`}>
+      {errors && (
+        <Modal title="Sign Up Error" show>
+          {errors}
+        </Modal>
+      )}
       <div className={`row m-0 align-items-md-center w-100`}>
         <section className={`col-12 col-md-6 ml-md-auto`}>
           <Logo customClass={`${classes.Logo}`} />
@@ -82,7 +98,7 @@ const SignIn = () => {
             </div>
             <Button
               type="submit"
-              disabled={!formState.formIsValid}
+              disabled={!formState.formIsValid || loading}
               blocked
               className={`${classes.Button}`}
             >

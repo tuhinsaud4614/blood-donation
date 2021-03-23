@@ -1,5 +1,9 @@
 import { useReducer, useState } from "react";
+import { useHistory } from "react-router";
+import { useDispatch, useSelector } from "react-redux";
 
+import { signUp } from "../../store/auth/actions";
+// import routes from "../../shared/utils/routes";
 import signUpReducer, {
   ABOUT_YOU,
   ADDRESS,
@@ -10,6 +14,7 @@ import signUpReducer, {
   WEIGHT,
 } from "./signUpReducer";
 import ContractInfo from "./components/ContractInfo";
+import Modal from "../../shared/components/modal/Modal";
 import BloodGroup from "./components/BloodGroup";
 import classes from "./SignUp.module.css";
 import Weight from "./components/Weight";
@@ -47,15 +52,18 @@ const init = {
 };
 
 const SignUp = () => {
+  const history = useHistory();
+  const rdxDispatch = useDispatch();
+  const { errors } = useSelector((state) => state.auth);
   const [signUpState, signUpDispatch] = useReducer(signUpReducer, init);
   const [indexState, setIndexState] = useState(1);
-
-  const submitHandler = (i, value) => {
+  const submitHandler = async (i, value) => {
     const newData = {
       ...signUpState,
       avatar: value,
     };
-    console.log(newData);
+    await rdxDispatch(signUp(newData, history.push));
+    setIndexState(1);
   };
 
   let element = (
@@ -163,7 +171,14 @@ const SignUp = () => {
   }
 
   return (
-    <div className={`${classes.SignUpContainer}`}>{element}</div>
+    <div className={`${classes.SignUpContainer}`}>
+      {errors && (
+        <Modal title="Sign Up Error" show>
+          {errors}
+        </Modal>
+      )}
+      {element}
+    </div>
   );
 };
 

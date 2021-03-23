@@ -19,7 +19,7 @@ const Age = ({ index, submitted }) => {
         valid: true,
       },
       month: {
-        month: "jan",
+        value: "jan",
         valid: true,
       },
     },
@@ -28,18 +28,18 @@ const Age = ({ index, submitted }) => {
 
   const submitHandler = () => {
     if (formState.formIsValid) {
-      submitted(index + 1, {
+      const temp = {
         age: formState.form.age.value,
         day: formState.form.day.value,
         month: formState.form.month.value,
-      });
+      };
+      submitted(index + 1, temp);
     }
   };
 
   const changeHandler = (name, value) => {
     const id = name;
     changeFunc(id, value, true);
-    
   };
   // console.log(formState);
   return (

@@ -10,9 +10,12 @@ import ProfileBadges from "./components/profile-badge/ProfileBadges";
 import ProfileCard from "./components/profile-card/ProfileCard";
 import ProfileHistory from "./components/profile-history/ProfileHistory";
 import classes from "./Profile.module.css";
+import { useDispatch } from "react-redux";
+import { signOut } from "../../store/auth/actions";
 
 const Profile = () => {
   const { push } = useHistory();
+  const rdxDispatch = useDispatch();
   return (
     <div className={`${classes.Profile}`}>
       <header className={`${classes.Header}`}>
@@ -32,7 +35,7 @@ const Profile = () => {
           />
           <IconButton
             className={`${classes.UserInfoButton}`}
-            clicked={() => {}}
+            clicked={() => rdxDispatch(signOut())}
           >
             <FiMoreVertical />
           </IconButton>

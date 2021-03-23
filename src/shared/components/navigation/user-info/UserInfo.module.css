@@ -21,6 +21,7 @@
   text-align: right;
   margin: 0;
   font-weight: bolder;
+  text-transform: capitalize;
 }
 
 .Texts > p {

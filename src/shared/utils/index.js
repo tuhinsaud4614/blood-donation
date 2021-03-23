@@ -41,3 +41,23 @@ export function validate(value, validators) {
   }
   return isValid;
 }
+
+export function setToLocalStorage(key, data) {
+  localStorage.setItem(key, JSON.stringify(data));
+}
+
+export function getFromLocalStorage(key) {
+  const stData = localStorage.getItem(key);
+  if (stData) {
+    try {
+      return JSON.parse(stData);
+    } catch (e) {
+      return null;
+    }
+  }
+  return null;
+}
+
+export function removeFromLocalStorage(key) {
+  localStorage.removeItem(key);
+}

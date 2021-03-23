@@ -13,6 +13,8 @@ import classes from "./Home.module.css";
 import Menu from "./componets/menu/Menu";
 import RequestBadges from "./componets/request-badges/RequestBadges";
 import Map from "./componets/map/Map";
+import { useDispatch } from "react-redux";
+import { signOut } from "../../store/auth/actions";
 
 const carouselData = [
   {
@@ -54,6 +56,7 @@ const carouselData = [
 ];
 
 const Home = () => {
+  const rdxDispatch = useDispatch();
   return (
     <div className={`${classes.Home}`}>
       <header className={`${classes.Header}`}>
@@ -73,7 +76,7 @@ const Home = () => {
           />
           <IconButton
             className={`${classes.UserInfoButton}`}
-            clicked={() => {}}
+            clicked={() => rdxDispatch(signOut())}
           >
             <FiMoreVertical />
           </IconButton>

@@ -43,7 +43,6 @@ function DateSlider({ closeItemNum, changed, items, name, children }) {
     ]);
     changed(name, modifiedItems[id].value);
   };
-
   return (
     <div className={`${classes.Container}`}>
       <div className={`${classes.Slider}`}>

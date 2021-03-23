@@ -9,9 +9,12 @@ import IconButton from "../../shared/components/button/IconButton";
 import UserInfo from "../../shared/components/navigation/user-info/UserInfo";
 import NotificationCard from "./components/notification-card/NotificationCard";
 import classes from "./Notifications.module.css";
+import { useDispatch } from "react-redux";
+import { signOut } from "../../store/auth/actions";
 
 const Notifications = () => {
   const { goBack } = useHistory();
+  const rdxDispatch = useDispatch();
   return (
     <div className={`${classes.Notifications}`}>
       <header className={`${classes.Header}`}>
@@ -31,7 +34,7 @@ const Notifications = () => {
           />
           <IconButton
             className={`${classes.UserInfoButton}`}
-            clicked={() => {}}
+            clicked={() => rdxDispatch(signOut())}
           >
             <FiMoreVertical />
           </IconButton>
