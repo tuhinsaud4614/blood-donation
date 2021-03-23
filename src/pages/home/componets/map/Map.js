@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { FiSearch } from "react-icons/fi";
+import { FiSearch, FiChevronDown } from "react-icons/fi";
 import { IoMaleSharp } from "react-icons/io5";
 
 import mapImg from "../../../../assets/img/map.png";
@@ -141,13 +141,13 @@ const Map = ({ className }) => {
               <div className={`${classes.SearchContainer}`}>
                 <SearchBox
                   id="text"
-                  name="text"
+                  name="search"
                   placeholder="Search here"
                   value={searchState}
                   changed={(e) => {
-                    setSearchState(e.targe.value);
+                    setSearchState(e.target.value);
                   }}
-                  submitted={(e) => {}}
+                  submitted={() => {}}
                   icon={<FiSearch />}
                 />
               </div>
@@ -155,6 +155,7 @@ const Map = ({ className }) => {
               {toggleState === "donor" && (
                 <div className={`px-3 ${classes.BloodGroup}`}>
                   <Select
+                    icon={<FiChevronDown />}
                     name="bloodGroup"
                     changed={(e) => {
                       setBloodState(e.target.value);

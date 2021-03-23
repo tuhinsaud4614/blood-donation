@@ -163,7 +163,7 @@ const SignUp = () => {
   }
 
   return (
-    <div className={`container ${classes.SignUpContainer}`}>{element}</div>
+    <div className={`${classes.SignUpContainer}`}>{element}</div>
   );
 };
 

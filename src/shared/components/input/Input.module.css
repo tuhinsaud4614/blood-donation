@@ -19,6 +19,8 @@
   position: absolute;
   right: 10px;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   font-size: 1.4rem;
   max-width: 20px;
@@ -28,10 +30,15 @@
 
 .Input:focus {
   background: var(--secondary-color);
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-.Input::placeholder {
+.Input::-webkit-input-placeholder {
+  color: #b1b3b6;
+}
+
+.Input::-moz-placeholder {
   color: #b1b3b6;
 }
 
@@ -39,6 +46,6 @@
   color: #b1b3b6;
 }
 
-.Input::-ms-input-placeholder {
+.Input::placeholder {
   color: #b1b3b6;
 }

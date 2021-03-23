@@ -10,6 +10,8 @@
 .RouteContainer {
   width: inherit;
   height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border-radius: calc(var(--border-radius) * 2.5);
   overflow: hidden !important;
@@ -17,6 +19,7 @@
 
 .Pages {
   height: inherit;
+  -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
   background: #faf6f6;
   padding: calc(var(--pd) * 2.5);

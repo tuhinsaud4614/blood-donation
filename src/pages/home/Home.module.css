@@ -11,13 +11,21 @@
   right: 0;
   left: 0;
   /* background: #fff; */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .HeaderTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .HeaderTitle > span {
@@ -28,8 +36,12 @@
 }
 
 .userInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: auto;
 }
 
@@ -53,8 +65,12 @@
 }
 
 .BodyBottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 .BodyBottomLeft > h3,
 .BodyBottomRight > h3 {
@@ -70,7 +86,9 @@
 
 .BodyBottomRight {
   /* min-width: calc(100% - 240px); */
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding-left: calc(var(--pd) * 2);
 }
 

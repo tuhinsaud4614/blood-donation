@@ -1,6 +1,6 @@
 import { FaArrowLeft } from "react-icons/fa";
 import { FiMoreVertical } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import routes from "../../shared/utils/routes";
 import userImg from "../../assets/img/user1.jpg";
@@ -129,11 +129,12 @@ const recentRequest = [
 ];
 
 const Request = () => {
+  const { goBack } = useHistory();
   return (
     <div className={`${classes.Request}`}>
       <header className={`${classes.Header}`}>
         <div className={`${classes.HeaderTitle}`}>
-          <IconButton clicked={() => {}}>
+          <IconButton clicked={() => goBack()}>
             <FaArrowLeft />
           </IconButton>
           <span>Requests</span>

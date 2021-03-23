@@ -1,6 +1,8 @@
 .SignUpContainer {
   height: inherit;
-  padding: calc(var(--pd) * 3) 0;
+  padding-top: calc(var(--pd) * 6);
+  background: #fff;
+  border-radius: calc(var(--border-radius) * 2.5);
 }
 
 .Form {
@@ -13,16 +15,19 @@
   margin-bottom: calc(var(--pd) * 2);
   font-weight: bolder;
   text-transform: capitalize;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
 .Logo {
   font-size: 1.4rem;
   margin: auto;
+  margin-bottom: calc(var(--pd) * 3);
 }
 
 .LogoInfo {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   color: var(--text-color);
   text-align: center;
   max-width: 220px;
@@ -39,15 +44,27 @@
 }
 
 .BloodGroupCol {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: calc(var(--pd) * 1.5) 0;
 }
 
 .Weight {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: calc(var(--pd) * 3.5) 0;
 }
@@ -64,14 +81,25 @@
 }
 
 .AgeContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 @media (max-width: 768px) {
   .SignInContainer {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
+    -webkit-box-pack: stretch;
+    -ms-flex-pack: stretch;
     justify-content: stretch;
   }
 

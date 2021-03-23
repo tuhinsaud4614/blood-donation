@@ -1,6 +1,8 @@
 .ReviewCard {
   border-radius: var(--border-radius);
   padding: var(--pd);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -9,16 +11,29 @@
 }
 
 .Head {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: var(--pd);
 }
 
 .HeadRight {
   padding: 0 var(--pd);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
 }
 
@@ -39,8 +54,14 @@
 }
 
 .Foot {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
@@ -49,11 +70,20 @@
   font-size: 1.2rem;
   cursor: pointer;
   padding: var(--pd);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
   margin-left: var(--pd);
   border-radius: var(--border-radius);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -67,5 +97,7 @@
 }
 
 .Foot > span:last-child > svg {
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
   transform: scaleX(-1);
 }

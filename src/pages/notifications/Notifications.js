@@ -1,3 +1,4 @@
+import { useHistory } from "react-router";
 import { FaBullhorn, FaArrowLeft, FaHistory } from "react-icons/fa";
 import { FiAward, FiMoreVertical } from "react-icons/fi";
 
@@ -10,11 +11,12 @@ import NotificationCard from "./components/notification-card/NotificationCard";
 import classes from "./Notifications.module.css";
 
 const Notifications = () => {
+  const { goBack } = useHistory();
   return (
     <div className={`${classes.Notifications}`}>
       <header className={`${classes.Header}`}>
         <div className={`${classes.HeaderTitle}`}>
-          <IconButton clicked={() => {}}>
+          <IconButton clicked={() => goBack()}>
             <FaArrowLeft />
           </IconButton>
           <span>Notifications</span>

@@ -21,6 +21,8 @@
 
 .CheckButtonLabel::before,
 .CheckButtonLabel::after {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -30,6 +32,8 @@
   width: 20px;
   height: 20px;
   background: var(--secondary-color);
+  -webkit-box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px,
+    rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
   box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px,
     rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
   position: absolute;
@@ -53,10 +57,14 @@
   position: absolute;
   top: 2px;
   left: 0;
+  -webkit-transform: rotate(180deg) scale(0);
+  -ms-transform: rotate(180deg) scale(0);
   transform: rotate(180deg) scale(0);
 }
 
 .CheckButton > input:checked + .CheckButtonLabel::after {
   left: 6px;
+  -webkit-transform: rotate(45deg) scale(1);
+  -ms-transform: rotate(45deg) scale(1);
   transform: rotate(45deg) scale(1);
 }

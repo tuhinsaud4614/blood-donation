@@ -46,13 +46,13 @@ const SignIn = () => {
   };
   console.log(formState);
   return (
-    <div className={`container ${classes.SignInContainer}`}>
+    <div className={`${classes.SignInContainer}`}>
       <div className={`row m-0 align-items-md-center w-100`}>
-        <section className={`col-12 col-md-6`}>
+        <section className={`col-12 col-md-6 ml-md-auto`}>
           <Logo customClass={`${classes.Logo}`} />
         </section>
         {/* Form start */}
-        <section className={`col-12 col-md-6 ${classes.Form}`}>
+        <section className={`col-12 col-md-6 mr-md-auto ${classes.Form}`}>
           <h1>sign in</h1>
           <form onSubmit={submitHandler}>
             <div className={`form-group pb-4`}>

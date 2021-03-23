@@ -36,7 +36,7 @@ const BloodGroup = ({ index, submitted }) => {
       info="Your blood group need to be accurate. If you don't know about it please contact nearest clinic."
     >
       <>
-        <div className={`${classes.BloodGroup}`}>
+        <div className={`${classes.BloodGroup} py-3`}>
           <div className={`${classes.BloodGroupCol}`}>
             <CircleRadio
               name="bloodGroup"

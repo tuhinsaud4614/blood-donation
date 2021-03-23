@@ -1,7 +1,9 @@
 import { FaArrowLeft } from "react-icons/fa";
 import { FiMoreVertical } from "react-icons/fi";
+import { useHistory } from "react-router";
 
 import userImg from "../../assets/img/user1.jpg";
+import routes from "../../shared/utils/routes";
 import IconButton from "../../shared/components/button/IconButton";
 import UserInfo from "../../shared/components/navigation/user-info/UserInfo";
 import ProfileBadges from "./components/profile-badge/ProfileBadges";
@@ -10,11 +12,12 @@ import ProfileHistory from "./components/profile-history/ProfileHistory";
 import classes from "./Profile.module.css";
 
 const Profile = () => {
+  const { push } = useHistory();
   return (
     <div className={`${classes.Profile}`}>
       <header className={`${classes.Header}`}>
         <div className={`${classes.HeaderTitle}`}>
-          <IconButton clicked={() => {}}>
+          <IconButton clicked={() => push(routes.request)}>
             <FaArrowLeft />
           </IconButton>
           <span>Requests</span>

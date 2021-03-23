@@ -11,12 +11,20 @@
   right: 0;
   left: 0;
   /* background: #fff; */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .HeaderTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -28,7 +36,11 @@
 }
 
 .userInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-left: auto;
 }
@@ -44,7 +56,11 @@
 }
 
 .BodyTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: calc(var(--pd) * 1.5) 0;
 }
@@ -54,7 +70,11 @@
 }
 
 .BodyBottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
   align-items: stretch;
 }
 .BodyBottomLeft > h3,
@@ -65,10 +85,12 @@
 }
 
 .BodyBottomLeft {
+  -ms-flex-preferred-size: 45%;
   flex-basis: 45%;
 }
 
 .BodyBottomRight {
+  -ms-flex-preferred-size: 55%;
   flex-basis: 55%;
 }
 

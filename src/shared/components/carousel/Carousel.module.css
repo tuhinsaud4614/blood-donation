@@ -4,6 +4,8 @@
 }
 
 .CarouselItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 var(--pd);
   border-radius: calc(var(--border-radius) * 2);
@@ -26,15 +28,35 @@
   right: 0;
   bottom: 0;
   top: 0;
+  background: -webkit-gradient(
+    linear,
+    left bottom, left top,
+    color-stop(47%, rgba(0, 0, 0, 0.7)),
+    to(rgba(0, 0, 0, 0))
+  );
+  background: -o-linear-gradient(
+    bottom,
+    rgba(0, 0, 0, 0.7) 47%,
+    rgba(0, 0, 0, 0) 100%
+  );
   background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0.7) 47%,
     rgba(0, 0, 0, 0) 100%
   );
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding: var(--pd);
 }
 
@@ -42,41 +64,66 @@
   margin: 0;
   font-size: 1.5rem;
   color: var(--secondary-color);
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .CarouselItemContent > h4 {
   margin: 0;
   font-size: 1.3rem;
   color: var(--secondary-color);
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .CarouselItemContentBottom {
   margin-top: calc(var(--pd) * 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
 }
 
 .CarouselItemContentBottom > span {
   color: var(--secondary-color);
   font-size: 1rem;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .CarouselButton {
   padding: calc(var(--pd) * 0.5);
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   z-index: 10;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: 0;
+      -ms-flex-pack: 0;
+          justify-content: 0;
   border: 0;
   outline: 0;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
   background-color: var(--primary-color);
   color: var(--secondary-color);
@@ -89,7 +136,8 @@
 }
 
 .CarouselButton:focus {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border: 0;
   outline: 0;
 }

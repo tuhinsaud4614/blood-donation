@@ -1,7 +1,7 @@
 .Map {
   border-radius: var(--border-radius);
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   position: relative;
   overflow: hidden;
 }
@@ -21,8 +21,15 @@
 }
 
 .Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: calc(var(--pd) * 1.5);
   width: 100%;
@@ -35,11 +42,17 @@
 }
 
 .HeaderTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .SearchContainer {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
@@ -55,6 +68,8 @@
   position: absolute;
   top: 50%;
   right: calc(var(--pd) * 3);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   z-index: 110;
 }

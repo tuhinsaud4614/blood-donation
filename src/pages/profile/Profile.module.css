@@ -11,12 +11,20 @@
   right: 0;
   left: 0;
   /* background: #fff; */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .HeaderTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -28,7 +36,11 @@
 }
 
 .UserInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -39,7 +51,11 @@
 }
 
 .Body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
   align-items: stretch;
   padding-top: calc(var(--pd) * 6.2);
 }
@@ -50,6 +66,7 @@
 }
 .BodyRight {
   padding: var(--pd);
+  -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
 }
 
@@ -72,8 +89,15 @@
 
 .BodyRight {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 

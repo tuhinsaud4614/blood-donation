@@ -36,7 +36,7 @@ const ProfileImage = ({ index, submitted }) => {
       info="Please do not use a model or doll. Please keep faith on yourself you're beautiful too"
     >
       <>
-        <div className={`${classes.AgeContainer} pb-4`}>
+        <div className={`${classes.AgeContainer} py-4 my-4`}>
           <ImagePicker
             name="avatar"
             value={formState.form.avatar.value}
@@ -49,7 +49,7 @@ const ProfileImage = ({ index, submitted }) => {
           disabled={!formState.formIsValid}
           blocked
           clicked={submitHandler}
-          className={`${classes.Button}`}
+          className={`${classes.Button} mt-4`}
         >
           Start Journey
         </Button>

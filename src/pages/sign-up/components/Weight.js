@@ -1,7 +1,7 @@
 import { FaArrowAltCircleUp, FaArrowAltCircleDown } from "react-icons/fa";
 import PropTypes from "prop-types";
 
-import { removeMultiSpace} from "../../../shared/utils";
+import { removeMultiSpace } from "../../../shared/utils";
 import useForm from "../../../shared/hooks/form-hook";
 import SignUpContainer from "./SignUpContainer";
 import ImageRadio from "../../../shared/components/radio-button/ImageRadio";
@@ -14,10 +14,10 @@ const Weight = ({ index, submitted }) => {
     form: {
       weight: {
         value: "49",
-        valid: false,
+        valid: true,
       },
     },
-    formIsValid: false,
+    formIsValid: true,
   });
 
   const submitHandler = () => {
@@ -29,16 +29,12 @@ const Weight = ({ index, submitted }) => {
   const changeHandler = (e) => {
     const id = e.target.name;
     const value = removeMultiSpace(e.target.value);
-    if (value === "51") {
-      changeFunc(id, value, true);
-    } else {
-      changeFunc(id, value, false);
-    }
+    changeFunc(id, value, true);
   };
   // console.log(formState);
   return (
     <SignUpContainer
-    formClass={`${classes.WeightForm}`}
+      formClass={`${classes.WeightForm}`}
       title="How Much Do You Weight"
       info="Note: you cant not donate blood if you're under weight. Minimum weight for donation required 50kg"
     >

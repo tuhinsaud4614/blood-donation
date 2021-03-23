@@ -1,6 +1,8 @@
 .Statistics {
   border-radius: var(--border-radius);
   padding: var(--pd);
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
 }
 

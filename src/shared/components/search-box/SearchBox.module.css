@@ -19,6 +19,8 @@
   position: absolute;
   left: 10px;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   font-size: 1.6rem;
   max-width: 25px;
@@ -29,7 +31,24 @@
 
 .SearchBox:focus {
   background: var(--secondary-color);
+  -webkit-box-shadow: none;
   box-shadow: none;
+}
+
+.SearchBox::-webkit-input-placeholder {
+  color: #b1b3b6;
+}
+
+.SearchBox::-moz-placeholder {
+  color: #b1b3b6;
+}
+
+.SearchBox:-ms-input-placeholder {
+  color: #b1b3b6;
+}
+
+.SearchBox::-ms-input-placeholder {
+  color: #b1b3b6;
 }
 
 .SearchBox::placeholder {
@@ -51,6 +70,6 @@
   color: var(--text-color);
   background: #fff;
   margin: var(--pd);
-  font-size: .9rem;
+  font-size: 0.9rem;
   border-radius: calc(var(--border-radius) * 2);
 }

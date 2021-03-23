@@ -1,7 +1,11 @@
 .RequestBadges {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: calc(var(--pd) * 2.5);
 }
 
@@ -14,5 +18,7 @@
 }
 
 .Badge {
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
 }

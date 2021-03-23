@@ -8,12 +8,12 @@ import classes from "./Welcome.module.css";
 const Welcome = () => {
   const { replace } = useHistory();
   return (
-    <div className={`container ${classes.Welcome}`}>
+    <div className={`${classes.Welcome}`}>
       <Logo customClass={`${classes.Logo}`} />
       <Button
         className={`${classes.Button}`}
         clicked={() => {
-          replace(routes.signIn);
+          replace(routes.request);
         }}
       >
         Start Journey

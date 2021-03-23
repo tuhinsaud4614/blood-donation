@@ -1,3 +1,4 @@
+import { useHistory } from "react-router";
 import { FaArrowLeft } from "react-icons/fa";
 import { FiMoreVertical } from "react-icons/fi";
 
@@ -45,11 +46,12 @@ const reviews = [
 ];
 
 const Donations = () => {
+  const { goBack } = useHistory();
   return (
     <div className={`${classes.Donations}`}>
       <header className={`${classes.Header}`}>
         <div className={`${classes.HeaderTitle}`}>
-          <IconButton clicked={() => {}}>
+          <IconButton clicked={() => goBack()}>
             <FaArrowLeft />
           </IconButton>
           <span>Donations</span>
